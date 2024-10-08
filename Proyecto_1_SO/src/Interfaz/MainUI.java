@@ -1,18 +1,165 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Interfaz;
 
+import Classes.Configuracion;
+import Classes.EstudioEmpresa;
+import Classes.LeerArchivo;
 import javax.swing.JOptionPane;
 
 public class MainUI extends javax.swing.JFrame {
     
+    public static EstudioEmpresa PlantaDell;
+    public static EstudioEmpresa PlantaHP;
+    public static Configuracion Configuracion;
+    public int contadorDell = 0;
+    public int contadorHP = 0;
     
-    /**
-     * Creates new form MainUI
-     */
+    public static boolean corriendoDell;
+    public static boolean corriendoHP;
+    
+    //------------Interfaz de Dell-----------------
+    public void DellPlacaBase(String text){
+        placaElementoDell.setText(text);
+    }
+    public void DellCPU(String text){
+        cpuElementoDell.setText(text);
+    }
+    public void DellRAM(String text){
+        ramElementoDell.setText(text);
+    }
+    public void DellFuenteA(String text){
+        fuenteElementoDell.setText(text);
+    }
+    public void DellTarjetaGraf(String text){
+        tarjetaElementoDell.setText(text);
+    }
+    public void DellListasEstandar(String text) {
+        estandarDell.setText(text);
+    }   
+    public void DellListasTarjetas(String text) {
+        conTarjetaDell.setText(text);
+    }
+    
+    public void DellCantidadTrabajadores(String inicialPlacaBase, String inicialCPU, String inicialRAM, String inicialFuenteA, String inicialTarjetaGraf, String inicialEnsambladores) {
+        
+        placaTrabajadoresDell.setText(inicialPlacaBase);
+        cpuTrabajadoresDell.setText(inicialCPU);
+        ramTrabajadoresDell.setText(inicialRAM);
+        fuenteTrabajadoresDell.setText(inicialFuenteA);
+        tarjetaTrabajadoresDell.setText(inicialTarjetaGraf);
+        ensambladorTrabajadoresDell.setText(inicialEnsambladores);
+    }
+    
+    public void DellGanancias(String totalGananciasDell) {
+        gananciasDell.setText(totalGananciasDell);
+    }
+    
+    public void DellCostos(String totalCostosDell) {
+        costosDell.setText(totalCostosDell);
+    }
+    
+    public void DellDiasFaltantes(String text){
+      diasFaltantesDell.setText(text);
+    }
+    
+    public void DellEstadoManager(String text){
+        estadoManagerDell.setText(text);
+    }
+    
+    public void DellDescontadoManager(String text){
+        descontadoManagerDell.setText(text);
+    }
+    
+    public void DellFallasManager(String text){
+        fallasManagerDell.setText(text);
+    }
+    
+    public void DellEstadoDirector(String text){
+        estadoDirectorDell.setText(text);
+    }
+    
+    public void DellCostosOtro(String Text){
+        costosDell.setText(Text);
+    }
+    
+    public void DellGananciaTotal(String Text){
+        gananciaTotalDell.setText(Text);
+    }
+
+    
+    
+    
+    
+    //------------Interfaz HP---------------------
+    public void HPPlacaBase(String text){
+        placaElementoHP.setText(text);
+    }
+    public void HPCPU(String text){
+        cpuElementoHP.setText(text);
+    }
+    public void HPRAM(String text){
+        ramElementoHP.setText(text);
+    }
+    public void HPFuenteA(String text){
+        fuenteElementoHP.setText(text);
+    }
+    public void HPTarjetaGraf(String text){
+        tarjetaElementoHP.setText(text);
+    }
+    public void HPListasEstandar(String text) {
+        estandarHP.setText(text);
+    }   
+    public void HPListasTarjetas(String text) {
+        conTarjetaHP.setText(text);
+    }  
+    
+    public void HPCantidadTrabajadores(String inicialPlacaBaseHP, String inicialCPUHP, String inicialRAMHP, String inicialFuenteAHP, String inicialTarjetaGrafHP, String inicialEnsambladoresHP) {
+        
+        placaTrabajadoresHP.setText(inicialPlacaBaseHP);
+        cpuTrabajadoresHP.setText(inicialCPUHP);
+        ramTrabajadoresHP.setText(inicialRAMHP);
+        fuenteTrabajadoresHP.setText(inicialFuenteAHP);
+        tarjetaTrabajadoresHP.setText(inicialTarjetaGrafHP);
+        ensambladorTrabajadoresHP.setText(inicialEnsambladoresHP);
+    }
+    
+    public void HPGanancias(String totalGananciasHP) {
+        gananciasHP.setText(totalGananciasHP);
+    }
+    
+    public void HPCostos(String totalCostosHP) {
+        costosHP.setText(totalCostosHP);
+    }
+    
+    public void HPDiasFaltantes(String text){
+      diasFaltantesHP.setText(text);
+    }
+    
+    public void HPEstadoManager(String text){
+        estadoManagerHP.setText(text);
+    }
+    
+    public void HPDescontadoManager(String text){
+        descontadoManagerHP.setText(text);
+    }
+    
+    public void HPallasManager(String text){
+        fallasManagerHP.setText(text);
+    }
+    
+    public void HPEstadoDirector(String text){
+        estadoDirectorHP.setText(text);
+    }
+    
+    public void HPCostosOtro(String Text){
+        costosHP.setText(Text);
+    }
+    
+    public void HPGananciaTotal(String Text){
+        gananciaTotalHP.setText(Text);
+    }
+        
+   
     public MainUI() {
         initComponents();
         
