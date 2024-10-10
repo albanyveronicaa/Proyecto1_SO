@@ -1,4 +1,3 @@
-
 package Interfaz;
 
 import Classes.Configuracion;
@@ -7,41 +6,47 @@ import Classes.LeerArchivo;
 import javax.swing.JOptionPane;
 
 public class MainUI extends javax.swing.JFrame {
-    
+
     public static EstudioEmpresa PlantaDell;
     public static EstudioEmpresa PlantaHP;
     public static Configuracion Configuracion;
     public int contadorDell = 0;
     public int contadorHP = 0;
-    
+
     public static boolean corriendoDell;
     public static boolean corriendoHP;
-    
+
     //-----------------Interfaz de Dell-----------------
-    public void DellPlacaBase(String text){
+    public void DellPlacaBase(String text) {
         placaElementoDell.setText(text);
     }
-    public void DellCPU(String text){
+
+    public void DellCPU(String text) {
         cpuElementoDell.setText(text);
     }
-    public void DellRAM(String text){
+
+    public void DellRAM(String text) {
         ramElementoDell.setText(text);
     }
-    public void DellFuenteA(String text){
+
+    public void DellFuenteA(String text) {
         fuenteElementoDell.setText(text);
     }
-    public void DellTarjetaGraf(String text){
+
+    public void DellTarjetaGraf(String text) {
         tarjetaElementoDell.setText(text);
     }
+
     public void DellListasEstandar(String text) {
         estandarDell.setText(text);
-    }   
+    }
+
     public void DellListasTarjetas(String text) {
         conTarjetaDell.setText(text);
     }
-    
+
     public void DellCantidadTrabajadores(String inicialPlacaBase, String inicialCPU, String inicialRAM, String inicialFuenteA, String inicialTarjetaGraf, String inicialEnsambladores) {
-        
+
         placaTrabajadoresDell.setText(inicialPlacaBase);
         cpuTrabajadoresDell.setText(inicialCPU);
         ramTrabajadoresDell.setText(inicialRAM);
@@ -49,72 +54,74 @@ public class MainUI extends javax.swing.JFrame {
         tarjetaTrabajadoresDell.setText(inicialTarjetaGraf);
         ensambladorTrabajadoresDell.setText(inicialEnsambladores);
     }
-    
-    public void DellGanancias(String totalGananciasDell) {
-        gananciasDell.setText(totalGananciasDell);
+
+    public void DellGanancias(String totalGanancias) {
+        gananciasDell.setText(totalGanancias);
     }
-    
+
     public void DellCostos(String totalCostosDell) {
         costosDell.setText(totalCostosDell);
     }
-    
-    public void DellDiasFaltantes(String text){
-      diasFaltantesDell.setText(text);
+
+    public void DellDiasFaltantes(String text) {
+        diasFaltantesDell.setText(text);
     }
-    
-    public void DellEstadoManager(String text){
+
+    public void DellEstadoManager(String text) {
         estadoManagerDell.setText(text);
     }
-    
-    public void DellDescontadoManager(String text){
+
+    public void DellDescontadoManager(String text) {
         descontadoManagerDell.setText(text);
     }
-    
-    public void DellFallasManager(String text){
+
+    public void DellFallasManager(String text) {
         fallasManagerDell.setText(text);
     }
-    
-    public void DellEstadoDirector(String text){
+
+    public void DellEstadoDirector(String text) {
         estadoDirectorDell.setText(text);
     }
-    
-    public void DellCostosOtro(String Text){
+
+    public void DellCostosOtro(String Text) {
         costosDell.setText(Text);
     }
-    
-    public void DellGananciaTotal(String Text){
+
+    public void DellUtilidad(String Text) {
         gananciaTotalDell.setText(Text);
     }
-    
-    
 
-    
-     
     //-----------------Interfaz HP-----------------
-    public void HPPlacaBase(String text){
+    public void HPPlacaBase(String text) {
         placaElementoHP.setText(text);
     }
-    public void HPCPU(String text){
+
+    public void HPCPU(String text) {
         cpuElementoHP.setText(text);
     }
-    public void HPRAM(String text){
+
+    public void HPRAM(String text) {
         ramElementoHP.setText(text);
     }
-    public void HPFuenteA(String text){
+
+    public void HPFuenteA(String text) {
         fuenteElementoHP.setText(text);
     }
-    public void HPTarjetaGraf(String text){
+
+    public void HPTarjetaGraf(String text) {
         tarjetaElementoHP.setText(text);
     }
+
     public void HPListasEstandar(String text) {
         estandarHP.setText(text);
-    }   
+    }
+
     public void HPListasTarjetas(String text) {
         conTarjetaHP.setText(text);
-    }  
-    
+    }
+
     public void HPCantidadTrabajadores(String inicialPlacaBaseHP, String inicialCPUHP, String inicialRAMHP, String inicialFuenteAHP, String inicialTarjetaGrafHP, String inicialEnsambladoresHP) {
-        
+
         placaTrabajadoresHP.setText(inicialPlacaBaseHP);
         cpuTrabajadoresHP.setText(inicialCPUHP);
         ramTrabajadoresHP.setText(inicialRAMHP);
@@ -122,71 +129,69 @@ public class MainUI extends javax.swing.JFrame {
         tarjetaTrabajadoresHP.setText(inicialTarjetaGrafHP);
         ensambladorTrabajadoresHP.setText(inicialEnsambladoresHP);
     }
-    
-    public void HPGanancias(String totalGananciasHP) {
-        gananciasHP.setText(totalGananciasHP);
+
+    public void HPGanancias(String totalGanancias) {
+        gananciasHP.setText(totalGanancias);
     }
-    
-    public void HPCostos(String totalCostosHP) {
-        costosHP.setText(totalCostosHP);
+
+    public void HPCostos(String text) {
+        costosHP.setText(text);
     }
-    
-    public void HPDiasFaltantes(String text){
-      diasFaltantesHP.setText(text);
+
+    public void HPDiasFaltantes(String text) {
+        diasFaltantesHP.setText(text);
     }
-    
-    public void HPEstadoManager(String text){
+
+    public void HPEstadoManager(String text) {
         estadoManagerHP.setText(text);
     }
-    
-    public void HPDescontadoManager(String text){
+
+    public void HPDescontadoManager(String text) {
         descontadoManagerHP.setText(text);
     }
-    
-    public void HPallasManager(String text){
+
+    public void HPallasManager(String text) {
         fallasManagerHP.setText(text);
     }
-    
-    public void HPEstadoDirector(String text){
+
+    public void HPEstadoDirector(String text) {
         estadoDirectorHP.setText(text);
     }
-    
-    public void HPCostosOtro(String Text){
-        costosHP.setText(Text);
+
+    public void HPCostosOtro(String totalCostos) {
+        costosHP.setText(totalCostos);
     }
-    
-    public void HPGananciaTotal(String Text){
+
+    public void HPUtilidad(String Text) {
         gananciaTotalHP.setText(Text);
     }
-        
-   
+
     public MainUI() {
         initComponents();
-        
+
         setVisible(true);
         setLocationRelativeTo(null);
-       
+
         Configuracion = new Configuracion();
-        
+
         try {
             LeerArchivo nfile = new LeerArchivo();
             String txt = nfile.leerTexto();
             nfile.leerConfiguracion(txt, Configuracion);
             JOptionPane.showMessageDialog(null, "¡Configuración cargada!");
-        
-        } catch(Exception e) {
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error");
         }
-        
-        
+
         corriendoDell = false;
         corriendoHP = false;
-        
+
         deshabilitarBotonDell();
         deshabilitarBotonHP();
 
     }
-    
+
     public void deshabilitarBotonDell() {
         if (corriendoDell) {
             placaBasePlusDell.setEnabled(true);
@@ -216,12 +221,12 @@ public class MainUI extends javax.swing.JFrame {
             fuenteMinDell.setEnabled(false);
             tarjetaMinDell.setEnabled(false);
             ensambladorMinDell.setEnabled(false);
-        }  
-        
+        }
+
     }
-    
+
     public void deshabilitarBotonHP() {
-            if (corriendoHP) {
+        if (corriendoHP) {
             placaBasePlusHP.setEnabled(true);
             cpuPlusHP.setEnabled(true);
             ramPlusHP.setEnabled(true);
@@ -251,8 +256,272 @@ public class MainUI extends javax.swing.JFrame {
             ensambladorMinHP.setEnabled(false);
         }
     }
-    
-    
+
+    public void deshabilitarComienzo(String nombrePlanta) {
+        switch (nombrePlanta) {
+
+            case "Dell":
+                comenzarDell.setEnabled(false);
+                break;
+
+            case "HP":
+                comenzarHP.setEnabled(false);
+        }
+    }
+
+    public void aumentarTrabajadores(EstudioEmpresa planta, String tipoTrabajador) {
+
+        switch (tipoTrabajador) {
+
+            case "Placa Base":
+
+                for (int i = 0; i < planta.getTrabajadores().length; i++) {
+
+                    if (planta.getTrabajadores()[i].getTipo().equals("Esperando")) {
+
+                        planta.getTrabajadores()[i].setTipo("Placa Base");
+
+                        if (planta.getNombre().equals("Dell")) {
+                            planta.getTrabajadores()[i].cambiarParametros(0.5f, 10);
+                            break;
+
+                        } else {
+                            planta.getTrabajadores()[i].cambiarParametros(0.5f, 10);
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case "CPU":
+
+                for (int i = 0; i < planta.getTrabajadores().length; i++) {
+
+                    if (planta.getTrabajadores()[i].getTipo().equals("Esperando")) {
+
+                        planta.getTrabajadores()[i].setTipo("CPU");
+
+                        if (planta.getNombre().equals("Dell")) {
+                            planta.getTrabajadores()[i].cambiarParametros(0.5f, 10);
+                            break;
+
+                        } else {
+                            planta.getTrabajadores()[i].cambiarParametros(0.5f, 10);
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case "RAM":
+
+                for (int i = 0; i < planta.getTrabajadores().length; i++) {
+
+                    if (planta.getTrabajadores()[i].getTipo().equals("Esperando")) {
+
+                        planta.getTrabajadores()[i].setTipo("RAM");
+
+                        if (planta.getNombre().equals("Dell")) {
+                            planta.getTrabajadores()[i].cambiarParametros(3f, 10);
+                            break;
+
+                        } else {
+                            planta.getTrabajadores()[i].cambiarParametros(3f, 10);
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case "Fuente de Alimentación":
+
+                for (int i = 0; i < planta.getTrabajadores().length; i++) {
+
+                    if (planta.getTrabajadores()[i].getTipo().equals("Esperando")) {
+
+                        planta.getTrabajadores()[i].setTipo("Fuente de Alimentación");
+
+                        if (planta.getNombre().equals("Dell")) {
+                            planta.getTrabajadores()[i].cambiarParametros(3f, 10);
+                            break;
+
+                        } else {
+                            planta.getTrabajadores()[i].cambiarParametros(3f, 10);
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case "Tarjeta Gráfica":
+
+                for (int i = 0; i < planta.getTrabajadores().length; i++) {
+
+                    if (planta.getTrabajadores()[i].getTipo().equals("Esperando")) {
+
+                        planta.getTrabajadores()[i].setTipo("Tarjeta Gráfica");
+
+                        if (planta.getNombre().equals("Dell")) {
+                            planta.getTrabajadores()[i].cambiarParametros(0.34f, 10);
+                            break;
+
+                        } else {
+                            planta.getTrabajadores()[i].cambiarParametros(0.34f, 10);
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case "Ensamblador":
+
+                for (int i = 0; i < planta.getTrabajadores().length; i++) {
+
+                    if (planta.getTrabajadores()[i].getTipo().equals("Esperando")) {
+
+                        planta.getTrabajadores()[i].setTipo("Ensamblador");
+
+                        if (planta.getNombre().equals("Dell")) {
+                            planta.getTrabajadores()[i].cambiarParametros(0.34f, 10);
+                            break;
+
+                        } else {
+                            planta.getTrabajadores()[i].cambiarParametros(0.34f, 10);
+                            break;
+                        }
+                    }
+                }
+                break;
+        }
+
+    }
+
+    public void reducirTrabajadores(EstudioEmpresa planta, String tipoTrabajador) {
+
+        switch (tipoTrabajador) {
+
+            case "Placa Base":
+
+                for (int i = 0; i < planta.getTrabajadores().length; i++) {
+
+                    if (planta.getTrabajadores()[i].getTipo().equals("Esperando")) {
+
+                        planta.getTrabajadores()[i].setTipo("Placa Base");
+
+                        if (planta.getNombre().equals("Dell")) {
+                            planta.getTrabajadores()[i].cambiarParametros(0, 0);
+                            break;
+
+                        } else {
+                            planta.getTrabajadores()[i].cambiarParametros(0, 0);
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case "CPU":
+
+                for (int i = 0; i < planta.getTrabajadores().length; i++) {
+
+                    if (planta.getTrabajadores()[i].getTipo().equals("Esperando")) {
+
+                        planta.getTrabajadores()[i].setTipo("CPU");
+
+                        if (planta.getNombre().equals("Dell")) {
+                            planta.getTrabajadores()[i].cambiarParametros(0, 0);
+                            break;
+
+                        } else {
+                            planta.getTrabajadores()[i].cambiarParametros(0, 0);
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case "RAM":
+
+                for (int i = 0; i < planta.getTrabajadores().length; i++) {
+
+                    if (planta.getTrabajadores()[i].getTipo().equals("Esperando")) {
+
+                        planta.getTrabajadores()[i].setTipo("RAM");
+
+                        if (planta.getNombre().equals("Dell")) {
+                            planta.getTrabajadores()[i].cambiarParametros(0, 0);
+                            break;
+
+                        } else {
+                            planta.getTrabajadores()[i].cambiarParametros(0, 0);
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case "Fuente de Alimentación":
+
+                for (int i = 0; i < planta.getTrabajadores().length; i++) {
+
+                    if (planta.getTrabajadores()[i].getTipo().equals("Esperando")) {
+
+                        planta.getTrabajadores()[i].setTipo("Fuente de Alimentación");
+
+                        if (planta.getNombre().equals("Dell")) {
+                            planta.getTrabajadores()[i].cambiarParametros(0, 0);
+                            break;
+
+                        } else {
+                            planta.getTrabajadores()[i].cambiarParametros(0, 0);
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case "Tarjeta Gráfica":
+
+                for (int i = 0; i < planta.getTrabajadores().length; i++) {
+
+                    if (planta.getTrabajadores()[i].getTipo().equals("Esperando")) {
+
+                        planta.getTrabajadores()[i].setTipo("Tarjeta Gráfica");
+
+                        if (planta.getNombre().equals("Dell")) {
+                            planta.getTrabajadores()[i].cambiarParametros(0, 0);
+                            break;
+
+                        } else {
+                            planta.getTrabajadores()[i].cambiarParametros(0, 0);
+                            break;
+                        }
+                    }
+                }
+                break;
+
+            case "Ensamblador":
+
+                for (int i = 0; i < planta.getTrabajadores().length; i++) {
+
+                    if (planta.getTrabajadores()[i].getTipo().equals("Esperando")) {
+
+                        planta.getTrabajadores()[i].setTipo("Ensamblador");
+
+                        if (planta.getNombre().equals("Dell")) {
+                            planta.getTrabajadores()[i].cambiarParametros(0, 0);
+                            break;
+
+                        } else {
+                            planta.getTrabajadores()[i].cambiarParametros(0, 0);
+                            break;
+                        }
+                    }
+                }
+                break;
+        }
+
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -485,11 +754,11 @@ public class MainUI extends javax.swing.JFrame {
         General_label.setForeground(new java.awt.Color(255, 255, 255));
         General_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         General_label.setText("GENERAL");
-        ConfigTab.add(General_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 140, 40));
+        ConfigTab.add(General_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 140, 40));
 
         trab_label.setBackground(new java.awt.Color(102, 102, 102));
         trab_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
-        trab_label.setForeground(new java.awt.Color(0, 153, 204));
+        trab_label.setForeground(new java.awt.Color(255, 255, 255));
         trab_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         trab_label.setText("MÁXIMO 21 TRABAJADORES");
         ConfigTab.add(trab_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 120, 190, 30));
@@ -595,25 +864,25 @@ public class MainUI extends javax.swing.JFrame {
                 establecerConfiguracionActionPerformed(evt);
             }
         });
-        ConfigTab.add(establecerConfiguracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 220, 40));
+        ConfigTab.add(establecerConfiguracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, 220, 40));
 
         dayDuration_label.setBackground(new java.awt.Color(102, 102, 102));
         dayDuration_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
         dayDuration_label.setForeground(new java.awt.Color(255, 255, 255));
         dayDuration_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         dayDuration_label.setText("Duración del día (Segundos)");
-        ConfigTab.add(dayDuration_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 190, 30));
+        ConfigTab.add(dayDuration_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 190, 30));
 
         chasis_label3.setBackground(new java.awt.Color(102, 102, 102));
         chasis_label3.setFont(new java.awt.Font("Microsoft YaHei", 1, 10)); // NOI18N
         chasis_label3.setForeground(new java.awt.Color(227, 227, 227));
         chasis_label3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        chasis_label3.setText("Presiona el botón para establecer la configuración");
-        ConfigTab.add(chasis_label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 280, 30));
+        chasis_label3.setText("Haz clic en el botón para establecer la configuración");
+        ConfigTab.add(chasis_label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 280, 30));
 
         trab_label4.setBackground(new java.awt.Color(255, 255, 255));
         trab_label4.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
-        trab_label4.setForeground(new java.awt.Color(0, 153, 204));
+        trab_label4.setForeground(new java.awt.Color(255, 255, 255));
         trab_label4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         trab_label4.setText("MÁXIMO 16 TRABAJADORES");
         ConfigTab.add(trab_label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, 180, 30));
@@ -734,7 +1003,7 @@ public class MainUI extends javax.swing.JFrame {
         assembled_labelM1.setFont(new java.awt.Font("Microsoft YaHei", 1, 24)); // NOI18N
         assembled_labelM1.setForeground(new java.awt.Color(255, 204, 255));
         assembled_labelM1.setText("COMPUTADORAS LISTAS");
-        DellTab.add(assembled_labelM1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 320, 40));
+        DellTab.add(assembled_labelM1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 320, 40));
 
         wm_label10.setFont(new java.awt.Font("Microsoft YaHei", 1, 16)); // NOI18N
         wm_label10.setForeground(new java.awt.Color(255, 204, 255));
@@ -844,12 +1113,12 @@ public class MainUI extends javax.swing.JFrame {
         DayLeftLamborghini3.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         DayLeftLamborghini3.setForeground(new java.awt.Color(255, 204, 255));
         DayLeftLamborghini3.setText("DÍAS FALTANTES:");
-        DellTab.add(DayLeftLamborghini3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, 180, 40));
+        DellTab.add(DayLeftLamborghini3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 450, 180, 40));
 
         diasFaltantesDell.setFont(new java.awt.Font("Microsoft YaHei", 1, 24)); // NOI18N
         diasFaltantesDell.setForeground(new java.awt.Color(255, 255, 255));
         diasFaltantesDell.setText("0");
-        DellTab.add(diasFaltantesDell, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 450, 50, 40));
+        DellTab.add(diasFaltantesDell, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 450, 80, 40));
 
         gananciaTotalDell.setFont(new java.awt.Font("Microsoft YaHei", 1, 24)); // NOI18N
         gananciaTotalDell.setForeground(new java.awt.Color(255, 255, 255));
@@ -872,69 +1141,69 @@ public class MainUI extends javax.swing.JFrame {
         directorStatus_label2.setForeground(new java.awt.Color(255, 255, 255));
         directorStatus_label2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         directorStatus_label2.setText("Estado:");
-        DellTab.add(directorStatus_label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 100, 40));
+        DellTab.add(directorStatus_label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, 110, 40));
 
         estadoDirectorDell.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         estadoDirectorDell.setForeground(new java.awt.Color(255, 255, 255));
         estadoDirectorDell.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         estadoDirectorDell.setText("Trabajando");
-        DellTab.add(estadoDirectorDell, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 160, 40));
+        DellTab.add(estadoDirectorDell, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 60, 160, 40));
 
         managerStatus_label6.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         managerStatus_label6.setForeground(new java.awt.Color(255, 255, 255));
         managerStatus_label6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         managerStatus_label6.setText("Estado:");
-        DellTab.add(managerStatus_label6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 70, 40));
+        DellTab.add(managerStatus_label6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 160, 70, 40));
 
         estadoManagerDell.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         estadoManagerDell.setForeground(new java.awt.Color(255, 255, 255));
         estadoManagerDell.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         estadoManagerDell.setText("Nada");
-        DellTab.add(estadoManagerDell, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 250, 40));
+        DellTab.add(estadoManagerDell, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, 250, 40));
 
         managerStatus_label7.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         managerStatus_label7.setForeground(new java.awt.Color(255, 255, 255));
         managerStatus_label7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         managerStatus_label7.setText("Fallas:");
-        DellTab.add(managerStatus_label7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 70, 40));
+        DellTab.add(managerStatus_label7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, 70, 40));
 
         fallasManagerDell.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         fallasManagerDell.setForeground(new java.awt.Color(255, 255, 255));
         fallasManagerDell.setText("0");
-        DellTab.add(fallasManagerDell, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 40, 40));
+        DellTab.add(fallasManagerDell, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 40, 40));
 
         managerStatus_label8.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         managerStatus_label8.setForeground(new java.awt.Color(255, 255, 255));
         managerStatus_label8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         managerStatus_label8.setText("Descontado:");
-        DellTab.add(managerStatus_label8, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 120, 40));
+        DellTab.add(managerStatus_label8, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 120, 40));
 
         descontadoManagerDell.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         descontadoManagerDell.setForeground(new java.awt.Color(255, 255, 255));
         descontadoManagerDell.setText("0");
-        DellTab.add(descontadoManagerDell, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, 120, 40));
+        DellTab.add(descontadoManagerDell, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, 70, 40));
 
         chas31.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         chas31.setForeground(new java.awt.Color(255, 255, 255));
         chas31.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         chas31.setText("Estándar:");
-        DellTab.add(chas31, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 360, 100, 40));
+        DellTab.add(chas31, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, 100, 40));
 
         estandarDell.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         estandarDell.setForeground(new java.awt.Color(255, 255, 255));
         estandarDell.setText("0");
-        DellTab.add(estandarDell, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 40, 40));
+        DellTab.add(estandarDell, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, 40, 40));
 
         chas32.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         chas32.setForeground(new java.awt.Color(255, 255, 255));
         chas32.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         chas32.setText("Con tarjeta gráfica:");
-        DellTab.add(chas32, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, 180, 40));
+        DellTab.add(chas32, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 400, 180, 40));
 
         conTarjetaDell.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         conTarjetaDell.setForeground(new java.awt.Color(255, 255, 255));
         conTarjetaDell.setText("0");
-        DellTab.add(conTarjetaDell, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 400, 40, 40));
+        DellTab.add(conTarjetaDell, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 400, 40, 40));
 
         chas33.setFont(new java.awt.Font("Microsoft YaHei", 1, 14)); // NOI18N
         chas33.setForeground(new java.awt.Color(255, 255, 255));
@@ -1164,7 +1433,7 @@ public class MainUI extends javax.swing.JFrame {
         wm_label3.setFont(new java.awt.Font("Microsoft YaHei", 1, 24)); // NOI18N
         wm_label3.setForeground(new java.awt.Color(255, 255, 255));
         wm_label3.setText("DIRECTOR");
-        HPTab.add(wm_label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 140, 40));
+        HPTab.add(wm_label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 140, 40));
 
         chas13.setFont(new java.awt.Font("Microsoft YaHei", 1, 14)); // NOI18N
         chas13.setForeground(new java.awt.Color(255, 255, 255));
@@ -1247,13 +1516,13 @@ public class MainUI extends javax.swing.JFrame {
         estadoDirectorHP.setForeground(new java.awt.Color(255, 255, 255));
         estadoDirectorHP.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         estadoDirectorHP.setText("Trabajando");
-        HPTab.add(estadoDirectorHP, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, 160, 40));
+        HPTab.add(estadoDirectorHP, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 60, 160, 40));
 
         directorStatus_label1.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         directorStatus_label1.setForeground(new java.awt.Color(255, 255, 255));
         directorStatus_label1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         directorStatus_label1.setText("Estado:");
-        HPTab.add(directorStatus_label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, 100, 40));
+        HPTab.add(directorStatus_label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 100, 40));
 
         managerStatus_label4.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         managerStatus_label4.setForeground(new java.awt.Color(255, 255, 255));
@@ -1281,39 +1550,39 @@ public class MainUI extends javax.swing.JFrame {
         wm_label7.setFont(new java.awt.Font("Microsoft YaHei", 1, 24)); // NOI18N
         wm_label7.setForeground(new java.awt.Color(255, 255, 255));
         wm_label7.setText("PROJECT MANAGER");
-        HPTab.add(wm_label7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 260, 40));
+        HPTab.add(wm_label7, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 120, 260, 40));
 
         DayLeftLamborghini1.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         DayLeftLamborghini1.setForeground(new java.awt.Color(255, 255, 255));
         DayLeftLamborghini1.setText("DÍAS FALTANTES:");
-        HPTab.add(DayLeftLamborghini1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, 180, 40));
+        HPTab.add(DayLeftLamborghini1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 450, 180, 40));
 
         chas19.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         chas19.setForeground(new java.awt.Color(255, 255, 255));
         chas19.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         chas19.setText("Con tarjeta gráfica:");
-        HPTab.add(chas19, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 180, 40));
+        HPTab.add(chas19, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 400, 180, 40));
 
         chas20.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         chas20.setForeground(new java.awt.Color(255, 255, 255));
         chas20.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         chas20.setText("Estándar:");
-        HPTab.add(chas20, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 360, 100, 40));
+        HPTab.add(chas20, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 360, 100, 40));
 
         conTarjetaHP.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         conTarjetaHP.setForeground(new java.awt.Color(255, 255, 255));
         conTarjetaHP.setText("0");
-        HPTab.add(conTarjetaHP, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 400, 40, 40));
+        HPTab.add(conTarjetaHP, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 400, 40, 40));
 
         estandarHP.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         estandarHP.setForeground(new java.awt.Color(255, 255, 255));
         estandarHP.setText("0");
-        HPTab.add(estandarHP, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 360, 40, 40));
+        HPTab.add(estandarHP, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 360, 40, 40));
 
         assembled_labelM4.setFont(new java.awt.Font("Microsoft YaHei", 1, 24)); // NOI18N
         assembled_labelM4.setForeground(new java.awt.Color(255, 255, 255));
         assembled_labelM4.setText("COMPUTADORAS LISTAS");
-        HPTab.add(assembled_labelM4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 310, 320, 40));
+        HPTab.add(assembled_labelM4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 320, 40));
 
         diasFaltantesHP.setFont(new java.awt.Font("Microsoft YaHei", 1, 24)); // NOI18N
         diasFaltantesHP.setForeground(new java.awt.Color(255, 255, 255));
@@ -1585,18 +1854,18 @@ public class MainUI extends javax.swing.JFrame {
     private void establecerConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_establecerConfiguracionActionPerformed
         String configString = "General\nduracionDias\n";
         boolean pass = true;
-        
-        try{
+
+        try {
             int duracionDia = Integer.parseInt(duracionDiaInput.getText()) * 1000;
             int diasEntrega = Integer.parseInt(diasEntregaInput.getText());
-            
+
             configString += Integer.toString(duracionDia) + "\ndiasEntrega\n" + Integer.toString(diasEntrega) + "\n";
-    
-        } catch(Exception e) {
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Debes ingresar un número\n(Duración del Día y Días para entregar)");
             pass = false;
         }
-        
+
         if (pass) {
             try {
                 //DELL
@@ -1645,84 +1914,186 @@ public class MainUI extends javax.swing.JFrame {
 
                 int sumHP = placaHP + cpusHP + ramsHP + fuenteAHP + tarjetaGHP + ensambHP;
 
-
-                if ((sumDell > 16) || (sumHP > 21)) {
-                    throw new Exception(); 
+                if ((sumHP > 16) || (sumDell > 21)) {
+                    throw new Exception();
                 }
-                
+
                 LeerArchivo file = new LeerArchivo();
                 file.imprimirTexto(configString);
 
                 String newConfig = file.leerTexto();
                 file.leerConfiguracion(newConfig, Configuracion);
-                
-            } catch(Exception e) {
 
-                JOptionPane.showMessageDialog(null, "Ingresa una cantidad de Trabajadores adecuada. La capacidad máxima de HP es 16 y para DELL es 21.\n " + "error: " + e);
+            } catch (Exception e) {
+
+                JOptionPane.showMessageDialog(null, "Ingresa una cantidad de Trabajadores adecuada.\nLa capacidad máxima para HP es 16 y para DELL es 21.");
             }
-        }   
+        }
     }//GEN-LAST:event_establecerConfiguracionActionPerformed
-                             
 
+    //Acciones Interfaz HP
     private void comenzarHPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comenzarHPActionPerformed
-            corriendoHP = true;
-            
+        corriendoHP = true;
+        deshabilitarBotonHP();
+        deshabilitarComienzo("HP");
 
+        HPDiasFaltantes(Integer.toString(Configuracion.getDiasDeEntrega()));
+        PlantaHP = new EstudioEmpresa("HP", this, Configuracion);
+        HPCantidadTrabajadores(Integer.toString(PlantaHP.getPlacaTrabajadores()), Integer.toString(PlantaHP.getCpuTrabajadores()), Integer.toString(PlantaHP.getRamTrabajadores()), Integer.toString(PlantaHP.getFuenteTrabajadores()), Integer.toString(PlantaHP.getTarjetaTrabajadores()), Integer.toString(PlantaHP.getEnsambladores()));
     }//GEN-LAST:event_comenzarHPActionPerformed
 
     private void placaBasePlusHPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placaBasePlusHPActionPerformed
+        if ((PlantaHP.sumaTrabajadores() < 16)) {
+            int placaInt = Integer.parseInt(placaTrabajadoresHP.getText()) + 1;
+            placaTrabajadoresHP.setText(Integer.toString(placaInt));
 
+            aumentarTrabajadores(PlantaHP, "placa");
+            PlantaHP.incrementaTrabajadoresPlacaB();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad máxima");
+        }
     }//GEN-LAST:event_placaBasePlusHPActionPerformed
 
     private void cpuPlusHPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpuPlusHPActionPerformed
+        if ((PlantaHP.sumaTrabajadores() < 16)) {
+            int cpuInt = Integer.parseInt(cpuTrabajadoresHP.getText()) + 1;
+            cpuTrabajadoresHP.setText(Integer.toString(cpuInt));
 
+            aumentarTrabajadores(PlantaHP, "cpu");
+            PlantaHP.incrementaTrabajadoresCpu();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad máxima");
+        }
     }//GEN-LAST:event_cpuPlusHPActionPerformed
 
     private void ramPlusHPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ramPlusHPActionPerformed
+        if ((PlantaHP.sumaTrabajadores() < 16)) {
+            int ramInt = Integer.parseInt(ramTrabajadoresHP.getText()) + 1;
+            ramTrabajadoresHP.setText(Integer.toString(ramInt));
 
+            aumentarTrabajadores(PlantaHP, "ram");
+            PlantaHP.incrementaTrabajadoresRam();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad máxima");
+        }
     }//GEN-LAST:event_ramPlusHPActionPerformed
 
     private void placaBaseMinHPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placaBaseMinHPActionPerformed
-
+        if (Integer.parseInt(placaTrabajadoresHP.getText()) > 1) {
+            int placaInt = Integer.parseInt(placaTrabajadoresHP.getText()) - 1;
+            placaTrabajadoresHP.setText(Integer.toString(placaInt));
+            reducirTrabajadores(PlantaHP, "placa");
+            PlantaHP.reduceTrabajadoresPlacaB();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad mínima");
+        }
     }//GEN-LAST:event_placaBaseMinHPActionPerformed
 
     private void cpuMinHPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpuMinHPActionPerformed
-
+        if (Integer.parseInt(cpuTrabajadoresHP.getText()) > 1) {
+            int cpuInt = Integer.parseInt(cpuTrabajadoresHP.getText()) - 1;
+            cpuTrabajadoresHP.setText(Integer.toString(cpuInt));
+            reducirTrabajadores(PlantaHP, "cpu");
+            PlantaHP.reduceTrabajadoresCPU();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad mínima");
+        }
     }//GEN-LAST:event_cpuMinHPActionPerformed
 
     private void ramMinHPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ramMinHPActionPerformed
-
+        if (Integer.parseInt(ramTrabajadoresHP.getText()) > 1) {
+            int ramInt = Integer.parseInt(ramTrabajadoresHP.getText()) - 1;
+            ramTrabajadoresHP.setText(Integer.toString(ramInt));
+            reducirTrabajadores(PlantaHP, "ram");
+            PlantaHP.reduceTrabajadoresRam();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad mínima");
+        }
     }//GEN-LAST:event_ramMinHPActionPerformed
 
     private void fuentePlusHPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fuentePlusHPActionPerformed
+        if ((PlantaHP.sumaTrabajadores() < 16)) {
+            int fuenteInt = Integer.parseInt(fuenteTrabajadoresHP.getText()) + 1;
+            fuenteTrabajadoresHP.setText(Integer.toString(fuenteInt));
 
+            aumentarTrabajadores(PlantaHP, "fuente");
+            PlantaHP.incrementaTrabajadoresFuente();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad máxima");
+        }
     }//GEN-LAST:event_fuentePlusHPActionPerformed
 
     private void fuenteMinHPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fuenteMinHPActionPerformed
-
+        if (Integer.parseInt(fuenteTrabajadoresHP.getText()) > 1) {
+            int fuenteInt = Integer.parseInt(fuenteTrabajadoresHP.getText()) - 1;
+            fuenteTrabajadoresHP.setText(Integer.toString(fuenteInt));
+            reducirTrabajadores(PlantaHP, "fuente");
+            PlantaHP.reduceTrabajadoresFuente();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad mínima");
+        }
     }//GEN-LAST:event_fuenteMinHPActionPerformed
 
     private void tarjetaMinHPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tarjetaMinHPActionPerformed
-
+        if (Integer.parseInt(tarjetaTrabajadoresHP.getText()) > 1) {
+            int tarjetaInt = Integer.parseInt(tarjetaTrabajadoresHP.getText()) - 1;
+            tarjetaTrabajadoresHP.setText(Integer.toString(tarjetaInt));
+            reducirTrabajadores(PlantaHP, "tarjeta");
+            PlantaHP.reduceTrabajadoresTarjeta();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad mínima");
+        }
     }//GEN-LAST:event_tarjetaMinHPActionPerformed
 
     private void tarjetaPlusHPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tarjetaPlusHPActionPerformed
+        if ((PlantaHP.sumaTrabajadores() < 16)) {
+            int tarjetaInt = Integer.parseInt(tarjetaTrabajadoresHP.getText()) + 1;
+            tarjetaTrabajadoresHP.setText(Integer.toString(tarjetaInt));
 
+            aumentarTrabajadores(PlantaHP, "tarjeta");
+            PlantaHP.incrementaTrabajadoresTarjeta();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad máxima");
+        }
     }//GEN-LAST:event_tarjetaPlusHPActionPerformed
 
     private void ensambladorMinHPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ensambladorMinHPActionPerformed
-
+        if (Integer.parseInt(ensambladorTrabajadoresHP.getText()) > 1) {
+            int ensambladorInt = Integer.parseInt(ensambladorTrabajadoresHP.getText()) - 1;
+            ensambladorTrabajadoresHP.setText(Integer.toString(ensambladorInt));
+            reducirTrabajadores(PlantaHP, "ensamblador");
+            PlantaHP.reduceEnsambladores();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad mínima");
+        }
     }//GEN-LAST:event_ensambladorMinHPActionPerformed
 
     private void ensambladorPlusHPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ensambladorPlusHPActionPerformed
+        if ((PlantaHP.sumaTrabajadores() < 16)) {
+            int ensambladorInt = Integer.parseInt(ensambladorTrabajadoresHP.getText()) + 1;
+            ensambladorTrabajadoresHP.setText(Integer.toString(ensambladorInt));
 
+            aumentarTrabajadores(PlantaHP, "ensamblador");
+            PlantaHP.incrementaEnsambladores();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad máxima");
+        }
     }//GEN-LAST:event_ensambladorPlusHPActionPerformed
+
 
     private void utility_labelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_utility_labelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_utility_labelActionPerformed
 
+    //Acciones Interfaz Dell
     private void comenzarDellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comenzarDellActionPerformed
+        corriendoDell = true;
+        deshabilitarBotonDell();
+        deshabilitarComienzo("Dell");
+
+        DellDiasFaltantes(Integer.toString(Configuracion.getDiasDeEntrega()));
+        PlantaDell = new EstudioEmpresa("Dell", this, Configuracion);
+        DellCantidadTrabajadores(Integer.toString(PlantaDell.getPlacaTrabajadores()), Integer.toString(PlantaDell.getCpuTrabajadores()), Integer.toString(PlantaDell.getRamTrabajadores()), Integer.toString(PlantaDell.getFuenteTrabajadores()), Integer.toString(PlantaDell.getTarjetaTrabajadores()), Integer.toString(PlantaDell.getEnsambladores()));
 
     }//GEN-LAST:event_comenzarDellActionPerformed
 
@@ -1731,55 +2102,143 @@ public class MainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_utility_label2ActionPerformed
 
     private void placaBaseMinDellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placaBaseMinDellActionPerformed
-        // TODO add your handling code here:
+        if (Integer.parseInt(placaTrabajadoresDell.getText()) > 1) {
+            int placaInt = Integer.parseInt(placaTrabajadoresDell.getText()) - 1;
+            placaTrabajadoresDell.setText(Integer.toString(placaInt));
+            reducirTrabajadores(PlantaDell, "placa");
+            PlantaDell.reduceTrabajadoresPlacaB();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad mínima");
+        }
     }//GEN-LAST:event_placaBaseMinDellActionPerformed
 
     private void placaBasePlusDellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placaBasePlusDellActionPerformed
-        // TODO add your handling code here:
+        if ((PlantaDell.sumaTrabajadores() < 21)) {
+            int placaInt = Integer.parseInt(placaTrabajadoresDell.getText()) + 1;
+            placaTrabajadoresDell.setText(Integer.toString(placaInt));
+
+            aumentarTrabajadores(PlantaDell, "placa");
+            PlantaDell.incrementaTrabajadoresPlacaB();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad máxima");
+        }
     }//GEN-LAST:event_placaBasePlusDellActionPerformed
 
     private void cpuPlusDellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpuPlusDellActionPerformed
-        // TODO add your handling code here:
+        if ((PlantaDell.sumaTrabajadores() < 21)) {
+            int cpuInt = Integer.parseInt(cpuTrabajadoresDell.getText()) + 1;
+            cpuTrabajadoresDell.setText(Integer.toString(cpuInt));
+
+            aumentarTrabajadores(PlantaDell, "cpu");
+            PlantaDell.incrementaTrabajadoresCpu();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad máxima");
+        }
     }//GEN-LAST:event_cpuPlusDellActionPerformed
 
     private void cpuMinDellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpuMinDellActionPerformed
-        // TODO add your handling code here:
+        if (Integer.parseInt(cpuTrabajadoresDell.getText()) > 1) {
+            int cpuInt = Integer.parseInt(cpuTrabajadoresDell.getText()) - 1;
+            cpuTrabajadoresDell.setText(Integer.toString(cpuInt));
+            reducirTrabajadores(PlantaDell, "cpu");
+            PlantaDell.reduceTrabajadoresCPU();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad mínima");
+        }
     }//GEN-LAST:event_cpuMinDellActionPerformed
 
     private void ramMinDellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ramMinDellActionPerformed
-        // TODO add your handling code here:
+        if (Integer.parseInt(ramTrabajadoresDell.getText()) > 1) {
+            int ramInt = Integer.parseInt(ramTrabajadoresDell.getText()) - 1;
+            ramTrabajadoresDell.setText(Integer.toString(ramInt));
+            reducirTrabajadores(PlantaDell, "ram");
+            PlantaDell.reduceTrabajadoresRam();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad mínima");
+        }
     }//GEN-LAST:event_ramMinDellActionPerformed
 
     private void ramPlusDellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ramPlusDellActionPerformed
-        // TODO add your handling code here:
+        if ((PlantaDell.sumaTrabajadores() < 21)) {
+            int ramInt = Integer.parseInt(ramTrabajadoresDell.getText()) + 1;
+            ramTrabajadoresDell.setText(Integer.toString(ramInt));
+
+            aumentarTrabajadores(PlantaDell, "ram");
+            PlantaDell.incrementaTrabajadoresRam();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad máxima");
+        }
     }//GEN-LAST:event_ramPlusDellActionPerformed
 
     private void fuentePlusDellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fuentePlusDellActionPerformed
-        // TODO add your handling code here:
+        if ((PlantaDell.sumaTrabajadores() < 21)) {
+            int fuenteInt = Integer.parseInt(fuenteTrabajadoresDell.getText()) + 1;
+            fuenteTrabajadoresDell.setText(Integer.toString(fuenteInt));
+
+            aumentarTrabajadores(PlantaDell, "fuente");
+            PlantaDell.incrementaTrabajadoresFuente();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad máxima");
+        }
     }//GEN-LAST:event_fuentePlusDellActionPerformed
 
     private void fuenteMinDellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fuenteMinDellActionPerformed
-        // TODO add your handling code here:
+        if (Integer.parseInt(fuenteTrabajadoresDell.getText()) > 1) {
+            int fuenteInt = Integer.parseInt(fuenteTrabajadoresDell.getText()) - 1;
+            fuenteTrabajadoresDell.setText(Integer.toString(fuenteInt));
+            reducirTrabajadores(PlantaDell, "fuente");
+            PlantaDell.reduceTrabajadoresFuente();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad mínima");
+        }
     }//GEN-LAST:event_fuenteMinDellActionPerformed
 
     private void tarjetaPlusDellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tarjetaPlusDellActionPerformed
-        // TODO add your handling code here:
+        if ((PlantaDell.sumaTrabajadores() < 21)) {
+            int tarjetaInt = Integer.parseInt(tarjetaTrabajadoresDell.getText()) + 1;
+            tarjetaTrabajadoresDell.setText(Integer.toString(tarjetaInt));
+
+            aumentarTrabajadores(PlantaDell, "tarjeta");
+            PlantaDell.incrementaTrabajadoresTarjeta();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad máxima");
+        }
     }//GEN-LAST:event_tarjetaPlusDellActionPerformed
 
     private void tarjetaMinDellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tarjetaMinDellActionPerformed
-        // TODO add your handling code here:
+        if (Integer.parseInt(tarjetaTrabajadoresDell.getText()) > 1) {
+            int tarjetaInt = Integer.parseInt(tarjetaTrabajadoresDell.getText()) - 1;
+            tarjetaTrabajadoresDell.setText(Integer.toString(tarjetaInt));
+            reducirTrabajadores(PlantaDell, "tarjeta");
+            PlantaDell.reduceTrabajadoresTarjeta();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad mínima");
+        }
     }//GEN-LAST:event_tarjetaMinDellActionPerformed
 
     private void ensambladorPlusDellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ensambladorPlusDellActionPerformed
-        // TODO add your handling code here:
+        if ((PlantaDell.sumaTrabajadores() < 21)) {
+            int ensambladorInt = Integer.parseInt(ensambladorTrabajadoresDell.getText()) + 1;
+            ensambladorTrabajadoresDell.setText(Integer.toString(ensambladorInt));
+
+            aumentarTrabajadores(PlantaDell, "ensamblador");
+            PlantaDell.incrementaEnsambladores();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad máxima");
+        }
     }//GEN-LAST:event_ensambladorPlusDellActionPerformed
 
     private void ensambladorMinDellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ensambladorMinDellActionPerformed
-        // TODO add your handling code here:
+        if (Integer.parseInt(ensambladorTrabajadoresDell.getText()) > 1) {
+            int ensambladorInt = Integer.parseInt(ensambladorTrabajadoresDell.getText()) - 1;
+            ensambladorTrabajadoresDell.setText(Integer.toString(ensambladorInt));
+            reducirTrabajadores(PlantaDell, "ensamblador");
+            PlantaDell.reduceEnsambladores();
+        } else {
+            JOptionPane.showMessageDialog(null, "Has alcanzado la capacidad mínima");
+        }
     }//GEN-LAST:event_ensambladorMinDellActionPerformed
 
-
-    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1994,5 +2453,4 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel wm_label9;
     // End of variables declaration//GEN-END:variables
 
-   
 }

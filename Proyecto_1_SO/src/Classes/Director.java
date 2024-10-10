@@ -69,7 +69,7 @@ public class Director extends Thread {
                     manager.reiniciarDias();
 
                     if (nombrePlanta.equals("Dell")) {
-                         // Actualizaciones en la interfaz para la planta Dell.
+                        // Actualizaciones en la interfaz para la planta Dell.
                         this.interfaz.DellDiasFaltantes(Integer.toString(this.manager.diasRestantes));
                         this.interfaz.DellGanancias("$" + Long.toString(deposito.getTotalGanancias()));
 
@@ -84,7 +84,7 @@ public class Director extends Thread {
                         this.falta = 0;
 
                         utilidad = ganancia - costo;
-                        
+
                         // Reiniciar los salarios y la lista de computadoras.
                         this.manager.ResetSalario();
                         this.accSalario = 0;
@@ -93,15 +93,15 @@ public class Director extends Thread {
                         this.interfaz.DellListasEstandar("0");
                         this.interfaz.HPListasEstandar("0");
                         this.interfaz.HPListasTarjetas("0");
-                        
+
                         // Actualización de costos y ganancias en la interfaz.
                         this.interfaz.DellCostos("$" + Integer.toString(costo));
-                        this.interfaz.DellGananciaTotal("$" + Integer.toString(utilidad));
+                        this.interfaz.DellUtilidad("$" + Integer.toString(utilidad));
                         this.interfaz.DellFallasManager(Integer.toString(this.falta));
                         this.interfaz.DellDescontadoManager("$" + Integer.toString(this.salarioDescontado));
 
                         this.interfaz.DellEstadoDirector("Reiniciando lote");
-                        
+
                         // Pausa simulada para el reinicio de ciclo.
                         Thread.sleep(duracionDias);
 
@@ -126,8 +126,7 @@ public class Director extends Thread {
                         this.deposito.totalGanancias = 0;
 
                         utilidad = ganancia - costo;
-                        
-                        
+
                         // Reiniciar listas de computadoras y actualizar costos/ganancias en HP.
                         this.deposito.resetComputadora();
                         this.interfaz.DellListasTarjetas("0");
@@ -136,7 +135,7 @@ public class Director extends Thread {
                         this.interfaz.HPListasTarjetas("0");
 
                         this.interfaz.HPCostos("$" + Integer.toString(costo));
-                        this.interfaz.HPGananciaTotal("$" + Integer.toString(utilidad));
+                        this.interfaz.HPUtilidad("$" + Integer.toString(utilidad));
                         this.interfaz.HPallasManager(Integer.toString(this.falta));
                         this.interfaz.HPDescontadoManager("$" + Integer.toString(this.salarioDescontado));
 
@@ -154,7 +153,7 @@ public class Director extends Thread {
                     int horaAleatoria = random.nextInt(24);
                     int hora = 0;
                     capturado = false;
-                    
+
                     // Ciclo de tiempo durante el día.
                     while (tiempoAcumulado < (this.duracionDias)) {
 
@@ -240,7 +239,7 @@ public class Director extends Thread {
     public void pausar() {
         this.pausar = true;
     }
-    
+
     /**
      * Reanudar el trabajo del director.
      */

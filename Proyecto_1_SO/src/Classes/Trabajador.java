@@ -4,12 +4,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * La clase Trabajador representa un empleado de la planta de la empresa, 
- * encargado de generar producción diaria y acumular salarios. 
- * Extiende la clase Thread para permitir la ejecución concurrente de las tareas del trabajador.
+ * La clase Trabajador representa un empleado de la planta de la empresa,
+ * encargado de generar producción diaria y acumular salarios. Extiende la clase
+ * Thread para permitir la ejecución concurrente de las tareas del trabajador.
  */
 public class Trabajador extends Thread {
-    
+
     private float produccionPorDia;  // Producción diaria del trabajador.
     private float salario;           // Salario del trabajador por jornada completa.
     private float accSalario;        // Salario acumulado del trabajador.
@@ -24,7 +24,8 @@ public class Trabajador extends Thread {
      *
      * @param produccionPorDia Producción diaria del trabajador.
      * @param salario Salario del trabajador por día.
-     * @param duracionDiaMilisegundos Duración de un día de trabajo en milisegundos.
+     * @param duracionDiaMilisegundos Duración de un día de trabajo en
+     * milisegundos.
      * @param tipo Tipo de trabajador (p. ej., "Placa Base").
      * @param planta Instancia de la planta donde trabaja el trabajador.
      */
@@ -37,10 +38,11 @@ public class Trabajador extends Thread {
         this.contadorProduccion = 0;
         this.planta = planta;
     }
-    
+
     /**
-     * Método que define el comportamiento del trabajador cuando se ejecuta en un hilo.
-     * El trabajador acumula salarios y produce cada cierto tiempo (simulado por la duración del día).
+     * Método que define el comportamiento del trabajador cuando se ejecuta en
+     * un hilo. El trabajador acumula salarios y produce cada cierto tiempo
+     * (simulado por la duración del día).
      */
     @Override
     public void run() {
@@ -49,9 +51,9 @@ public class Trabajador extends Thread {
         } catch (InterruptedException ex) {
             Logger.getLogger(Trabajador.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         // Bucle infinito de trabajo diario
-        while(true) {
+        while (true) {
             try {
                 pago(); // Acumula el pago del trabajador.
                 produccionPorDia(); // Genera producción y actualiza los almacenes de la planta.
@@ -68,24 +70,26 @@ public class Trabajador extends Thread {
     public void pausar() {
         this.pausar = true;
     }
-    
+
     /**
      * Método para reanudar las actividades del trabajador.
      */
     public void reanudar() {
         this.pausar = false;
     }
-    
+
     /**
-     * Acumula el pago diario del trabajador. Asume un salario por hora y lo multiplica por 24.
+     * Acumula el pago diario del trabajador. Asume un salario por hora y lo
+     * multiplica por 24.
      */
     public void pago() {
         this.accSalario += this.salario * 24; // Acumula salario para una jornada completa de 24 horas.
     }
 
     /**
-     * Incrementa la producción diaria del trabajador. Si la producción es suficiente (>= 1),
-     * se actualiza el almacén de la planta y se reinicia el contador de producción.
+     * Incrementa la producción diaria del trabajador. Si la producción es
+     * suficiente (>= 1), se actualiza el almacén de la planta y se reinicia el
+     * contador de producción.
      */
     public void produccionPorDia() {
         this.contadorProduccion += this.produccionPorDia;
@@ -112,12 +116,11 @@ public class Trabajador extends Thread {
         setSalario(salario);
         setProduccionPorDia(tasaProduccion);
     }
-    
-    // Getters y Setters
 
+    // Getters y Setters
     /**
      * Obtiene la producción diaria del trabajador.
-     * 
+     *
      * @return Producción diaria del trabajador.
      */
     public float getProduccionPorDia() {
@@ -126,7 +129,7 @@ public class Trabajador extends Thread {
 
     /**
      * Establece una nueva tasa de producción diaria para el trabajador.
-     * 
+     *
      * @param produccionPorDia Nueva producción diaria a establecer.
      */
     public void setProduccionPorDia(float produccionPorDia) {
@@ -135,7 +138,7 @@ public class Trabajador extends Thread {
 
     /**
      * Obtiene el salario del trabajador.
-     * 
+     *
      * @return Salario del trabajador.
      */
     public float getSalario() {
@@ -144,7 +147,7 @@ public class Trabajador extends Thread {
 
     /**
      * Establece un nuevo salario para el trabajador.
-     * 
+     *
      * @param salario Nuevo salario a establecer.
      */
     public void setSalario(float salario) {
@@ -153,7 +156,7 @@ public class Trabajador extends Thread {
 
     /**
      * Obtiene el salario acumulado del trabajador.
-     * 
+     *
      * @return Salario acumulado del trabajador.
      */
     public float getAccSalario() {
@@ -162,13 +165,13 @@ public class Trabajador extends Thread {
 
     /**
      * Establece un nuevo valor para el salario acumulado del trabajador.
-     * 
+     *
      * @param accSalario Nuevo salario acumulado.
      */
     public void setAccSalario(float accSalario) {
         this.accSalario = accSalario;
     }
-    
+
     /**
      * Reinicia el salario acumulado a cero.
      */
@@ -178,7 +181,7 @@ public class Trabajador extends Thread {
 
     /**
      * Obtiene el tipo de trabajador.
-     * 
+     *
      * @return Tipo de trabajador.
      */
     public String getTipo() {
@@ -187,7 +190,7 @@ public class Trabajador extends Thread {
 
     /**
      * Establece un nuevo tipo de trabajador.
-     * 
+     *
      * @param tipo Nuevo tipo de trabajador a establecer.
      */
     public void setTipo(String tipo) {
