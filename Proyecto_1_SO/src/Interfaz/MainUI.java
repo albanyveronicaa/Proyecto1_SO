@@ -17,7 +17,7 @@ public class MainUI extends javax.swing.JFrame {
     public static boolean corriendoDell;
     public static boolean corriendoHP;
     
-    //------------Interfaz de Dell-----------------
+    //-----------------Interfaz de Dell-----------------
     public void DellPlacaBase(String text){
         placaElementoDell.setText(text);
     }
@@ -85,12 +85,12 @@ public class MainUI extends javax.swing.JFrame {
     public void DellGananciaTotal(String Text){
         gananciaTotalDell.setText(Text);
     }
+    
+    
 
     
-    
-    
-    
-    //------------Interfaz HP---------------------
+     
+    //-----------------Interfaz HP-----------------
     public void HPPlacaBase(String text){
         placaElementoHP.setText(text);
     }
@@ -166,11 +166,93 @@ public class MainUI extends javax.swing.JFrame {
         setVisible(true);
         setLocationRelativeTo(null);
        
-             
+        Configuracion = new Configuracion();
+        
+        try {
+            LeerArchivo nfile = new LeerArchivo();
+            String txt = nfile.leerTexto();
+            nfile.leerConfiguracion(txt, Configuracion);
+            JOptionPane.showMessageDialog(null, "¡Configuración cargada!");
+        
+        } catch(Exception e) {
+            JOptionPane.showMessageDialog(null, "Error");
+        }
+        
+        
+        corriendoDell = false;
+        corriendoHP = false;
+        
+        deshabilitarBotonDell();
+        deshabilitarBotonHP();
 
     }
     
+    public void deshabilitarBotonDell() {
+        if (corriendoDell) {
+            placaBasePlusDell.setEnabled(true);
+            cpuPlusDell.setEnabled(true);
+            ramPlusDell.setEnabled(true);
+            fuentePlusDell.setEnabled(true);
+            tarjetaPlusDell.setEnabled(true);
+            ensambladorPlusDell.setEnabled(true);
 
+            placaBaseMinDell.setEnabled(true);
+            cpuMinDell.setEnabled(true);
+            ramMinDell.setEnabled(true);
+            fuenteMinDell.setEnabled(true);
+            tarjetaMinDell.setEnabled(true);
+            ensambladorMinDell.setEnabled(true);
+        } else {
+            placaBasePlusDell.setEnabled(false);
+            cpuPlusDell.setEnabled(false);
+            ramPlusDell.setEnabled(false);
+            fuentePlusDell.setEnabled(false);
+            tarjetaPlusDell.setEnabled(false);
+            ensambladorPlusDell.setEnabled(false);
+
+            placaBaseMinDell.setEnabled(false);
+            cpuMinDell.setEnabled(false);
+            ramMinDell.setEnabled(false);
+            fuenteMinDell.setEnabled(false);
+            tarjetaMinDell.setEnabled(false);
+            ensambladorMinDell.setEnabled(false);
+        }  
+        
+    }
+    
+    public void deshabilitarBotonHP() {
+            if (corriendoHP) {
+            placaBasePlusHP.setEnabled(true);
+            cpuPlusHP.setEnabled(true);
+            ramPlusHP.setEnabled(true);
+            fuentePlusHP.setEnabled(true);
+            tarjetaPlusHP.setEnabled(true);
+            ensambladorPlusHP.setEnabled(true);
+
+            placaBaseMinHP.setEnabled(true);
+            cpuMinHP.setEnabled(true);
+            ramMinHP.setEnabled(true);
+            fuenteMinHP.setEnabled(true);
+            tarjetaMinHP.setEnabled(true);
+            ensambladorMinHP.setEnabled(true);
+        } else {
+            placaBasePlusHP.setEnabled(false);
+            cpuPlusHP.setEnabled(false);
+            ramPlusHP.setEnabled(false);
+            fuentePlusHP.setEnabled(false);
+            tarjetaPlusHP.setEnabled(false);
+            ensambladorPlusHP.setEnabled(false);
+
+            placaBaseMinHP.setEnabled(false);
+            cpuMinHP.setEnabled(false);
+            ramMinHP.setEnabled(false);
+            fuenteMinHP.setEnabled(false);
+            tarjetaMinHP.setEnabled(false);
+            ensambladorMinHP.setEnabled(false);
+        }
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -183,24 +265,24 @@ public class MainUI extends javax.swing.JFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         ConfigTab = new javax.swing.JPanel();
-        Maserati_label = new javax.swing.JLabel();
+        DELL_label = new javax.swing.JLabel();
         Config_label = new javax.swing.JLabel();
-        accessory_label = new javax.swing.JLabel();
-        Lambog_label = new javax.swing.JLabel();
+        tarjetaG_label = new javax.swing.JLabel();
+        HP_label = new javax.swing.JLabel();
         General_label = new javax.swing.JLabel();
-        chasis_label = new javax.swing.JLabel();
-        body_label = new javax.swing.JLabel();
-        motor_label = new javax.swing.JLabel();
-        wheel_label = new javax.swing.JLabel();
+        trab_label = new javax.swing.JLabel();
+        cpu_label = new javax.swing.JLabel();
+        ram_label = new javax.swing.JLabel();
+        fuentea_label = new javax.swing.JLabel();
         tarjetaGraficaHP = new javax.swing.JSpinner();
         placaBaseHP = new javax.swing.JSpinner();
         ramHP = new javax.swing.JSpinner();
         fuenteHP = new javax.swing.JSpinner();
-        accessory_label1 = new javax.swing.JLabel();
-        chasis_label1 = new javax.swing.JLabel();
-        body_label1 = new javax.swing.JLabel();
-        motor_label1 = new javax.swing.JLabel();
-        wheel_label1 = new javax.swing.JLabel();
+        TarjetaG_label1 = new javax.swing.JLabel();
+        placa_label1 = new javax.swing.JLabel();
+        cpu_label1 = new javax.swing.JLabel();
+        ram_label1 = new javax.swing.JLabel();
+        fuenteA_label1 = new javax.swing.JLabel();
         tarjetaGraficaDell = new javax.swing.JSpinner();
         placaBaseDell = new javax.swing.JSpinner();
         cpuDell = new javax.swing.JSpinner();
@@ -209,7 +291,7 @@ public class MainUI extends javax.swing.JFrame {
         establecerConfiguracion = new javax.swing.JButton();
         dayDuration_label = new javax.swing.JLabel();
         chasis_label3 = new javax.swing.JLabel();
-        chasis_label4 = new javax.swing.JLabel();
+        trab_label4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         duracionDiaInput = new javax.swing.JTextPane();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -218,12 +300,12 @@ public class MainUI extends javax.swing.JFrame {
         ensambladorHP = new javax.swing.JSpinner();
         assemblers_label2 = new javax.swing.JLabel();
         ensambladorDell = new javax.swing.JSpinner();
-        chasis_label6 = new javax.swing.JLabel();
+        placa_label6 = new javax.swing.JLabel();
         assemblers_label1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        chasis_label5 = new javax.swing.JLabel();
+        prod_label5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        chasis_label8 = new javax.swing.JLabel();
+        prod_label8 = new javax.swing.JLabel();
         cpuHP = new javax.swing.JSpinner();
         DellTab = new javax.swing.JPanel();
         comenzarDell = new javax.swing.JButton();
@@ -372,31 +454,31 @@ public class MainUI extends javax.swing.JFrame {
         ConfigTab.setForeground(new java.awt.Color(255, 255, 255));
         ConfigTab.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Maserati_label.setBackground(new java.awt.Color(102, 102, 102));
-        Maserati_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 24)); // NOI18N
-        Maserati_label.setForeground(new java.awt.Color(255, 255, 255));
-        Maserati_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Maserati_label.setText("DELL");
-        ConfigTab.add(Maserati_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 80, 180, 60));
+        DELL_label.setBackground(new java.awt.Color(102, 102, 102));
+        DELL_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 24)); // NOI18N
+        DELL_label.setForeground(new java.awt.Color(255, 255, 255));
+        DELL_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        DELL_label.setText("DELL");
+        ConfigTab.add(DELL_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 80, 180, 60));
 
         Config_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 36)); // NOI18N
         Config_label.setForeground(new java.awt.Color(255, 255, 255));
         Config_label.setText("CONFIGURACIÓN");
         ConfigTab.add(Config_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 330, 60));
 
-        accessory_label.setBackground(new java.awt.Color(102, 102, 102));
-        accessory_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
-        accessory_label.setForeground(new java.awt.Color(255, 255, 255));
-        accessory_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        accessory_label.setText("Tarjetas gráficas");
-        ConfigTab.add(accessory_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 120, 30));
+        tarjetaG_label.setBackground(new java.awt.Color(102, 102, 102));
+        tarjetaG_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
+        tarjetaG_label.setForeground(new java.awt.Color(255, 255, 255));
+        tarjetaG_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tarjetaG_label.setText("Tarjetas gráficas");
+        ConfigTab.add(tarjetaG_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 390, 120, 30));
 
-        Lambog_label.setBackground(new java.awt.Color(102, 102, 102));
-        Lambog_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 24)); // NOI18N
-        Lambog_label.setForeground(new java.awt.Color(255, 255, 255));
-        Lambog_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Lambog_label.setText("HP");
-        ConfigTab.add(Lambog_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 210, 60));
+        HP_label.setBackground(new java.awt.Color(102, 102, 102));
+        HP_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 24)); // NOI18N
+        HP_label.setForeground(new java.awt.Color(255, 255, 255));
+        HP_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        HP_label.setText("HP");
+        ConfigTab.add(HP_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, 210, 60));
 
         General_label.setBackground(new java.awt.Color(102, 102, 102));
         General_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 24)); // NOI18N
@@ -405,33 +487,33 @@ public class MainUI extends javax.swing.JFrame {
         General_label.setText("GENERAL");
         ConfigTab.add(General_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 140, 40));
 
-        chasis_label.setBackground(new java.awt.Color(102, 102, 102));
-        chasis_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
-        chasis_label.setForeground(new java.awt.Color(0, 153, 204));
-        chasis_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        chasis_label.setText("MÁXIMO 21 TRABAJADORES");
-        ConfigTab.add(chasis_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 120, 190, 30));
+        trab_label.setBackground(new java.awt.Color(102, 102, 102));
+        trab_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
+        trab_label.setForeground(new java.awt.Color(0, 153, 204));
+        trab_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        trab_label.setText("MÁXIMO 21 TRABAJADORES");
+        ConfigTab.add(trab_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 120, 190, 30));
 
-        body_label.setBackground(new java.awt.Color(102, 102, 102));
-        body_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
-        body_label.setForeground(new java.awt.Color(255, 255, 255));
-        body_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        body_label.setText("CPUs");
-        ConfigTab.add(body_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 60, 30));
+        cpu_label.setBackground(new java.awt.Color(102, 102, 102));
+        cpu_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
+        cpu_label.setForeground(new java.awt.Color(255, 255, 255));
+        cpu_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cpu_label.setText("CPUs");
+        ConfigTab.add(cpu_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 60, 30));
 
-        motor_label.setBackground(new java.awt.Color(102, 102, 102));
-        motor_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
-        motor_label.setForeground(new java.awt.Color(255, 255, 255));
-        motor_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        motor_label.setText("Memoria RAM");
-        ConfigTab.add(motor_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 290, 110, 30));
+        ram_label.setBackground(new java.awt.Color(102, 102, 102));
+        ram_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
+        ram_label.setForeground(new java.awt.Color(255, 255, 255));
+        ram_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ram_label.setText("Memoria RAM");
+        ConfigTab.add(ram_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 290, 110, 30));
 
-        wheel_label.setBackground(new java.awt.Color(102, 102, 102));
-        wheel_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
-        wheel_label.setForeground(new java.awt.Color(255, 255, 255));
-        wheel_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        wheel_label.setText("Fuente de alimentación");
-        ConfigTab.add(wheel_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 340, 160, 30));
+        fuentea_label.setBackground(new java.awt.Color(102, 102, 102));
+        fuentea_label.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
+        fuentea_label.setForeground(new java.awt.Color(255, 255, 255));
+        fuentea_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fuentea_label.setText("Fuente de alimentación");
+        ConfigTab.add(fuentea_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 340, 160, 30));
 
         tarjetaGraficaHP.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
         tarjetaGraficaHP.setModel(new javax.swing.SpinnerNumberModel(1, 1, 11, 1));
@@ -449,40 +531,40 @@ public class MainUI extends javax.swing.JFrame {
         fuenteHP.setModel(new javax.swing.SpinnerNumberModel(1, 1, 11, 1));
         ConfigTab.add(fuenteHP, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 340, -1, 30));
 
-        accessory_label1.setBackground(new java.awt.Color(102, 102, 102));
-        accessory_label1.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
-        accessory_label1.setForeground(new java.awt.Color(255, 255, 255));
-        accessory_label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        accessory_label1.setText("Tarjetas gráficas");
-        ConfigTab.add(accessory_label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 390, 120, 30));
+        TarjetaG_label1.setBackground(new java.awt.Color(102, 102, 102));
+        TarjetaG_label1.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
+        TarjetaG_label1.setForeground(new java.awt.Color(255, 255, 255));
+        TarjetaG_label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TarjetaG_label1.setText("Tarjetas gráficas");
+        ConfigTab.add(TarjetaG_label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 390, 120, 30));
 
-        chasis_label1.setBackground(new java.awt.Color(102, 102, 102));
-        chasis_label1.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
-        chasis_label1.setForeground(new java.awt.Color(255, 255, 255));
-        chasis_label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        chasis_label1.setText("Placa base");
-        ConfigTab.add(chasis_label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 90, 30));
+        placa_label1.setBackground(new java.awt.Color(102, 102, 102));
+        placa_label1.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
+        placa_label1.setForeground(new java.awt.Color(255, 255, 255));
+        placa_label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        placa_label1.setText("Placa base");
+        ConfigTab.add(placa_label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 90, 30));
 
-        body_label1.setBackground(new java.awt.Color(102, 102, 102));
-        body_label1.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
-        body_label1.setForeground(new java.awt.Color(255, 255, 255));
-        body_label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        body_label1.setText("CPUs");
-        ConfigTab.add(body_label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 240, 60, 30));
+        cpu_label1.setBackground(new java.awt.Color(102, 102, 102));
+        cpu_label1.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
+        cpu_label1.setForeground(new java.awt.Color(255, 255, 255));
+        cpu_label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cpu_label1.setText("CPUs");
+        ConfigTab.add(cpu_label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 240, 60, 30));
 
-        motor_label1.setBackground(new java.awt.Color(102, 102, 102));
-        motor_label1.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
-        motor_label1.setForeground(new java.awt.Color(255, 255, 255));
-        motor_label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        motor_label1.setText("Memoria RAM");
-        ConfigTab.add(motor_label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 290, 110, 30));
+        ram_label1.setBackground(new java.awt.Color(102, 102, 102));
+        ram_label1.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
+        ram_label1.setForeground(new java.awt.Color(255, 255, 255));
+        ram_label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ram_label1.setText("Memoria RAM");
+        ConfigTab.add(ram_label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 290, 110, 30));
 
-        wheel_label1.setBackground(new java.awt.Color(102, 102, 102));
-        wheel_label1.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
-        wheel_label1.setForeground(new java.awt.Color(255, 255, 255));
-        wheel_label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        wheel_label1.setText("Fuente de alimentación");
-        ConfigTab.add(wheel_label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 340, 160, 30));
+        fuenteA_label1.setBackground(new java.awt.Color(102, 102, 102));
+        fuenteA_label1.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
+        fuenteA_label1.setForeground(new java.awt.Color(255, 255, 255));
+        fuenteA_label1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fuenteA_label1.setText("Fuente de alimentación");
+        ConfigTab.add(fuenteA_label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 340, 160, 30));
 
         tarjetaGraficaDell.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
         tarjetaGraficaDell.setModel(new javax.swing.SpinnerNumberModel(1, 1, 16, 1));
@@ -529,12 +611,12 @@ public class MainUI extends javax.swing.JFrame {
         chasis_label3.setText("Presiona el botón para establecer la configuración");
         ConfigTab.add(chasis_label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 280, 30));
 
-        chasis_label4.setBackground(new java.awt.Color(255, 255, 255));
-        chasis_label4.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
-        chasis_label4.setForeground(new java.awt.Color(0, 153, 204));
-        chasis_label4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        chasis_label4.setText("MÁXIMO 16 TRABAJADORES");
-        ConfigTab.add(chasis_label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, 180, 30));
+        trab_label4.setBackground(new java.awt.Color(255, 255, 255));
+        trab_label4.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
+        trab_label4.setForeground(new java.awt.Color(0, 153, 204));
+        trab_label4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        trab_label4.setText("MÁXIMO 16 TRABAJADORES");
+        ConfigTab.add(trab_label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, 180, 30));
 
         duracionDiaInput.setFont(new java.awt.Font("Microsoft YaHei", 0, 12)); // NOI18N
         duracionDiaInput.setForeground(new java.awt.Color(51, 51, 51));
@@ -570,12 +652,12 @@ public class MainUI extends javax.swing.JFrame {
         ensambladorDell.setModel(new javax.swing.SpinnerNumberModel(1, 1, 16, 1));
         ConfigTab.add(ensambladorDell, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 440, -1, 30));
 
-        chasis_label6.setBackground(new java.awt.Color(102, 102, 102));
-        chasis_label6.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
-        chasis_label6.setForeground(new java.awt.Color(255, 255, 255));
-        chasis_label6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        chasis_label6.setText("Placa base");
-        ConfigTab.add(chasis_label6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 90, 30));
+        placa_label6.setBackground(new java.awt.Color(102, 102, 102));
+        placa_label6.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
+        placa_label6.setForeground(new java.awt.Color(255, 255, 255));
+        placa_label6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        placa_label6.setText("Placa base");
+        ConfigTab.add(placa_label6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 90, 30));
 
         assemblers_label1.setBackground(new java.awt.Color(102, 102, 102));
         assemblers_label1.setFont(new java.awt.Font("Microsoft YaHei", 1, 12)); // NOI18N
@@ -587,24 +669,24 @@ public class MainUI extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 51, 255));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        chasis_label5.setBackground(new java.awt.Color(102, 102, 102));
-        chasis_label5.setFont(new java.awt.Font("Microsoft YaHei", 1, 14)); // NOI18N
-        chasis_label5.setForeground(new java.awt.Color(255, 255, 255));
-        chasis_label5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        chasis_label5.setText("PRODUCTORES DE:");
-        jPanel1.add(chasis_label5);
+        prod_label5.setBackground(new java.awt.Color(102, 102, 102));
+        prod_label5.setFont(new java.awt.Font("Microsoft YaHei", 1, 14)); // NOI18N
+        prod_label5.setForeground(new java.awt.Color(255, 255, 255));
+        prod_label5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        prod_label5.setText("PRODUCTORES DE:");
+        jPanel1.add(prod_label5);
 
         ConfigTab.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 160, 150, 30));
 
         jPanel2.setBackground(new java.awt.Color(0, 51, 255));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
-        chasis_label8.setBackground(new java.awt.Color(102, 102, 102));
-        chasis_label8.setFont(new java.awt.Font("Microsoft YaHei", 1, 14)); // NOI18N
-        chasis_label8.setForeground(new java.awt.Color(255, 255, 255));
-        chasis_label8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        chasis_label8.setText("PRODUCTORES DE:");
-        jPanel2.add(chasis_label8);
+        prod_label8.setBackground(new java.awt.Color(102, 102, 102));
+        prod_label8.setFont(new java.awt.Font("Microsoft YaHei", 1, 14)); // NOI18N
+        prod_label8.setForeground(new java.awt.Color(255, 255, 255));
+        prod_label8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        prod_label8.setText("PRODUCTORES DE:");
+        jPanel2.add(prod_label8);
 
         ConfigTab.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 150, 30));
 
@@ -1501,11 +1583,90 @@ public class MainUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void establecerConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_establecerConfiguracionActionPerformed
+        String configString = "General\nduracionDias\n";
+        boolean pass = true;
+        
+        try{
+            int duracionDia = Integer.parseInt(duracionDiaInput.getText()) * 1000;
+            int diasEntrega = Integer.parseInt(diasEntregaInput.getText());
+            
+            configString += Integer.toString(duracionDia) + "\ndiasEntrega\n" + Integer.toString(diasEntrega) + "\n";
+    
+        } catch(Exception e) {
+            JOptionPane.showMessageDialog(null, "Debes ingresar un número\n(Duración del Día y Días para entregar)");
+            pass = false;
+        }
+        
+        if (pass) {
+            try {
+                //DELL
+                configString += "\nDell\nplaca\n";
+
+                Integer placaDell = (Integer) placaBaseDell.getValue();
+                configString += placaDell.toString() + "\ncpu\n";
+
+                Integer cpusDell = (Integer) cpuDell.getValue();
+                configString += cpusDell + "\nram\n";
+
+                Integer ramsDell = (Integer) ramDell.getValue();
+                configString += ramsDell + "\nfuenteA\n";
+
+                Integer fuenteADell = (Integer) fuenteDell.getValue();
+                configString += fuenteADell + "\ntarjetaG\n";
+
+                Integer tarjetaGDell = (Integer) tarjetaGraficaDell.getValue();
+                configString += tarjetaGDell + "\nensamblador\n";
+
+                Integer ensambDell = (Integer) ensambladorDell.getValue();
+                configString += ensambDell + "\n";
+
+                int sumDell = placaDell + cpusDell + ramsDell + fuenteADell + tarjetaGDell + ensambDell;
+
+                //HP
+                configString += "\nHP\nplaca\n";
+
+                Integer placaHP = (Integer) placaBaseHP.getValue();
+                configString += placaDell.toString() + "\ncpu\n";
+
+                Integer cpusHP = (Integer) cpuHP.getValue();
+                configString += cpusDell + "\nram\n";
+
+                Integer ramsHP = (Integer) ramHP.getValue();
+                configString += ramsDell + "\nfuenteA\n";
+
+                Integer fuenteAHP = (Integer) fuenteHP.getValue();
+                configString += fuenteADell + "\ntarjetaG\n";
+
+                Integer tarjetaGHP = (Integer) tarjetaGraficaHP.getValue();
+                configString += tarjetaGDell + "\nensamblador\n";
+
+                Integer ensambHP = (Integer) ensambladorHP.getValue();
+                configString += ensambDell + "\n";
+
+                int sumHP = placaHP + cpusHP + ramsHP + fuenteAHP + tarjetaGHP + ensambHP;
+
+
+                if ((sumDell > 16) || (sumHP > 21)) {
+                    throw new Exception(); 
+                }
                 
+                LeerArchivo file = new LeerArchivo();
+                file.imprimirTexto(configString);
+
+                String newConfig = file.leerTexto();
+                file.leerConfiguracion(newConfig, Configuracion);
+                
+            } catch(Exception e) {
+
+                JOptionPane.showMessageDialog(null, "Ingresa una cantidad de Trabajadores adecuada. La capacidad máxima de HP es 16 y para DELL es 21.\n " + "error: " + e);
+            }
+        }   
     }//GEN-LAST:event_establecerConfiguracionActionPerformed
                              
 
     private void comenzarHPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comenzarHPActionPerformed
+            corriendoHP = true;
+            
 
     }//GEN-LAST:event_comenzarHPActionPerformed
 
@@ -1655,17 +1816,16 @@ public class MainUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ConfigTab;
     private javax.swing.JLabel Config_label;
+    private javax.swing.JLabel DELL_label;
     private javax.swing.JLabel DayLeftLamborghini1;
     private javax.swing.JLabel DayLeftLamborghini3;
     private javax.swing.JPanel DellTab;
     private javax.swing.JLabel General_label;
     private javax.swing.JPanel HPTab;
+    private javax.swing.JLabel HP_label;
     private javax.swing.JLabel L_label;
-    private javax.swing.JLabel Lambog_label;
     private javax.swing.JLabel M_label;
-    private javax.swing.JLabel Maserati_label;
-    private javax.swing.JLabel accessory_label;
-    private javax.swing.JLabel accessory_label1;
+    private javax.swing.JLabel TarjetaG_label1;
     private javax.swing.JLabel assembled_labelM1;
     private javax.swing.JLabel assembled_labelM4;
     private javax.swing.JLabel assembled_labelM5;
@@ -1674,8 +1834,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel assembled_labelM8;
     private javax.swing.JLabel assemblers_label1;
     private javax.swing.JLabel assemblers_label2;
-    private javax.swing.JLabel body_label;
-    private javax.swing.JLabel body_label1;
     private javax.swing.JLabel chas13;
     private javax.swing.JLabel chas14;
     private javax.swing.JLabel chas15;
@@ -1702,13 +1860,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel chas36;
     private javax.swing.JLabel chas37;
     private javax.swing.JLabel chas38;
-    private javax.swing.JLabel chasis_label;
-    private javax.swing.JLabel chasis_label1;
     private javax.swing.JLabel chasis_label3;
-    private javax.swing.JLabel chasis_label4;
-    private javax.swing.JLabel chasis_label5;
-    private javax.swing.JLabel chasis_label6;
-    private javax.swing.JLabel chasis_label8;
     private javax.swing.JButton comenzarDell;
     private javax.swing.JButton comenzarHP;
     private javax.swing.JLabel conTarjetaDell;
@@ -1725,6 +1877,8 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JButton cpuPlusHP;
     private javax.swing.JLabel cpuTrabajadoresDell;
     private javax.swing.JLabel cpuTrabajadoresHP;
+    private javax.swing.JLabel cpu_label;
+    private javax.swing.JLabel cpu_label1;
     private javax.swing.JLabel dayDuration_label;
     private javax.swing.JLabel dayDuration_label1;
     private javax.swing.JLabel descontadoManagerDell;
@@ -1752,6 +1906,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel estandarHP;
     private javax.swing.JLabel fallasManagerDell;
     private javax.swing.JLabel fallasManagerHP;
+    private javax.swing.JLabel fuenteA_label1;
     private javax.swing.JSpinner fuenteDell;
     private javax.swing.JLabel fuenteElementoDell;
     private javax.swing.JLabel fuenteElementoHP;
@@ -1762,6 +1917,7 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JButton fuentePlusHP;
     private javax.swing.JLabel fuenteTrabajadoresDell;
     private javax.swing.JLabel fuenteTrabajadoresHP;
+    private javax.swing.JLabel fuentea_label;
     private javax.swing.JLabel gananciaTotalDell;
     private javax.swing.JLabel gananciaTotalHP;
     private javax.swing.JLabel gananciasDell;
@@ -1787,8 +1943,6 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel maxRamHP;
     private javax.swing.JLabel maxTarjetaDell;
     private javax.swing.JLabel maxTarjetaHP;
-    private javax.swing.JLabel motor_label;
-    private javax.swing.JLabel motor_label1;
     private javax.swing.JSpinner placaBaseDell;
     private javax.swing.JSpinner placaBaseHP;
     private javax.swing.JButton placaBaseMinDell;
@@ -1799,6 +1953,10 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JLabel placaElementoHP;
     private javax.swing.JLabel placaTrabajadoresDell;
     private javax.swing.JLabel placaTrabajadoresHP;
+    private javax.swing.JLabel placa_label1;
+    private javax.swing.JLabel placa_label6;
+    private javax.swing.JLabel prod_label5;
+    private javax.swing.JLabel prod_label8;
     private javax.swing.JSpinner ramDell;
     private javax.swing.JLabel ramElementoDell;
     private javax.swing.JLabel ramElementoHP;
@@ -1809,8 +1967,11 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JButton ramPlusHP;
     private javax.swing.JLabel ramTrabajadoresDell;
     private javax.swing.JLabel ramTrabajadoresHP;
+    private javax.swing.JLabel ram_label;
+    private javax.swing.JLabel ram_label1;
     private javax.swing.JLabel tarjetaElementoDell;
     private javax.swing.JLabel tarjetaElementoHP;
+    private javax.swing.JLabel tarjetaG_label;
     private javax.swing.JSpinner tarjetaGraficaDell;
     private javax.swing.JSpinner tarjetaGraficaHP;
     private javax.swing.JButton tarjetaMinDell;
@@ -1819,10 +1980,10 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JButton tarjetaPlusHP;
     private javax.swing.JLabel tarjetaTrabajadoresDell;
     private javax.swing.JLabel tarjetaTrabajadoresHP;
+    private javax.swing.JLabel trab_label;
+    private javax.swing.JLabel trab_label4;
     private javax.swing.JFormattedTextField utility_label;
     private javax.swing.JFormattedTextField utility_label2;
-    private javax.swing.JLabel wheel_label;
-    private javax.swing.JLabel wheel_label1;
     private javax.swing.JLabel wm_label;
     private javax.swing.JLabel wm_label1;
     private javax.swing.JLabel wm_label10;
