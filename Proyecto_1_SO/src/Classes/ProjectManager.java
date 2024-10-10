@@ -1,6 +1,8 @@
 package Classes;
 
 import Interfaz.MainUI;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * La clase ProjectManager representa un administrador de proyectos en la planta de la empresa.
@@ -28,9 +30,7 @@ public class ProjectManager extends Thread {
         this.salario = salario;
         this.dieciseisHoras = 16;
         this.inactivo = false;
-        this.configuracion = configuracion;
-        
-        
+        this.configuracion = configuracion;        
         this.diasRestantes = diasRestantes;
         this.accSalario = 0;
         this.planta = planta; 
@@ -39,6 +39,81 @@ public class ProjectManager extends Thread {
         this.nombrePlanta = nombrePlanta;
         this.configuracion = configuracion;
     }
+    
+    @Override
+    public void run(){ 
+     
+        while (true) {
+            try {
+         
+           acummulatedTime = 0;
+           
+           this.diasRestantes--;
+           pago();
+           
+           while (acummulatedTime < (this.duracionDias*0.67)) {
+          
+         if(nombrePlanta.equals("Dell")){      
+            if (inactivo) {
+                acummulatedTime += duracionDias*0.0208;
+                inactivo = false;
+                Thread.sleep((long) (duracionDias*0.0208));
+                Interfaz.DellEstadoManager("Viendo One Piece");
+                
+            } else {
+                acummulatedTime += duracionDias*0.0208;
+                inactivo = true; 
+                Thread.sleep((long) (duracionDias*0.0208));
+                Interfaz.DellEstadoManager("Revisando avances");
+                
+            }
+           
+                
+         }else {
+             if (inactivo) {
+                acummulatedTime += duracionDias*0.0208;
+                inactivo = false;
+                Thread.sleep((long) (duracionDias*0.0208));
+                Interfaz.HPEstadoManager("Viendo One Piece");
+                
+            } else {
+                acummulatedTime += duracionDias*0.0208;
+                inactivo = true; 
+                Thread.sleep((long) (duracionDias*0.0208));
+                Interfaz.HPEstadoManager("Revisando avances");
+                
+            }
+           
+         }            
+          
+      }
+                     
+            if(nombrePlanta.equals("Dell")){
+               if(this.diasRestantes >= 0) 
+               {
+                
+                this.Interfaz.DellDiasFaltantes(Integer.toString(this.diasRestantes));
+                Interfaz.DellEstadoManager("Cambiando los días"); 
+               }
+            }else{
+                    
+                    if(this.diasRestantes>= 0) 
+               {
+                this.Interfaz.HPDiasFaltantes(Integer.toString(this.diasRestantes));
+                Interfaz.HPEstadoManager("Cambiando los días");
+               }
+            }
+            Thread.sleep((long) (this.duracionDias*0.33));
+           
+            
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ProjectManager.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        
+        
+    }
+
     
     /**
      * Reinicia los días restantes a la cantidad especificada en la configuración.
