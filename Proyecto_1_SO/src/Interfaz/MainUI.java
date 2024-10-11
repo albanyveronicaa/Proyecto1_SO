@@ -1870,47 +1870,47 @@ public class MainUI extends javax.swing.JFrame {
             try {
                 //DELL
                 configString += "\nDell\nplaca\n";
-
+               
                 Integer placaDell = (Integer) placaBaseDell.getValue();
                 configString += placaDell.toString() + "\ncpu\n";
-
+                
                 Integer cpusDell = (Integer) cpuDell.getValue();
                 configString += cpusDell + "\nram\n";
-
+               
                 Integer ramsDell = (Integer) ramDell.getValue();
                 configString += ramsDell + "\nfuenteA\n";
-
+                
                 Integer fuenteADell = (Integer) fuenteDell.getValue();
                 configString += fuenteADell + "\ntarjetaG\n";
-
+                
                 Integer tarjetaGDell = (Integer) tarjetaGraficaDell.getValue();
                 configString += tarjetaGDell + "\nensamblador\n";
-
+                
                 Integer ensambDell = (Integer) ensambladorDell.getValue();
                 configString += ensambDell + "\n";
 
-                int sumDell = placaDell + cpusDell + ramsDell + fuenteADell + tarjetaGDell + ensambDell;
+                int sumDell = placaDell + cpusDell + ramsDell + fuenteADell + tarjetaGDell ;
 
                 //HP
                 configString += "\nHP\nplaca\n";
-
+                
                 Integer placaHP = (Integer) placaBaseHP.getValue();
-                configString += placaDell.toString() + "\ncpu\n";
-
+                configString += placaHP.toString() + "\ncpu\n";
+                
                 Integer cpusHP = (Integer) cpuHP.getValue();
-                configString += cpusDell + "\nram\n";
-
+                configString += cpusHP + "\nram\n";
+               
                 Integer ramsHP = (Integer) ramHP.getValue();
-                configString += ramsDell + "\nfuenteA\n";
-
+                configString += ramsHP + "\nfuenteA\n";
+                
                 Integer fuenteAHP = (Integer) fuenteHP.getValue();
-                configString += fuenteADell + "\ntarjetaG\n";
-
+                configString += fuenteAHP + "\ntarjetaG\n";
+                
                 Integer tarjetaGHP = (Integer) tarjetaGraficaHP.getValue();
-                configString += tarjetaGDell + "\nensamblador\n";
-
+                configString += tarjetaGHP + "\nensamblador\n";
+                
                 Integer ensambHP = (Integer) ensambladorHP.getValue();
-                configString += ensambDell + "\n";
+                configString += ensambHP + "\n";
 
                 int sumHP = placaHP + cpusHP + ramsHP + fuenteAHP + tarjetaGHP + ensambHP;
 

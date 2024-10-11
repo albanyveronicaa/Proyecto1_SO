@@ -93,7 +93,7 @@ public class Almacen {
 
         switch (tipoTrabajador) {
 
-            case "ensamblador":
+            case "Ensamblador":
 
                 if (nombrePlanta.equals("Dell")) {
                     if (contador == 3) {
@@ -171,7 +171,7 @@ public class Almacen {
 
                 break;
 
-            case "placa":
+            case "Placa Base":
 
                 if (this.placaCantidad < this.maxPlacaCantidad) {
                     this.placaCantidad += elementoFinalizado;
@@ -191,7 +191,7 @@ public class Almacen {
                 }
                 break;
 
-            case "cpu":
+            case "CPU":
 
                 if (this.cpuCantidad < this.maxCpuCantidad) {
                     this.cpuCantidad += elementoFinalizado;
@@ -211,7 +211,7 @@ public class Almacen {
 
                 break;
 
-            case "ram":
+            case "RAM":
 
                 if (this.ramCantidad < this.maxRamCantidad) {
                     this.ramCantidad += elementoFinalizado;
@@ -232,7 +232,7 @@ public class Almacen {
 
                 break;
 
-            case "fuenteA":
+            case "Fuente de Alimentación":
 
                 if (this.fuenteCantidad < this.maxFuenteCantidad) {
                     this.fuenteCantidad += elementoFinalizado;
@@ -254,7 +254,7 @@ public class Almacen {
 
                 break;
 
-            case "tarjetaG":
+            case "Tarjeta Gráfica":
                 if (this.tarjetaCantidad < this.maxTarjetaCantidad) {
                     this.tarjetaCantidad += elementoFinalizado;
 
