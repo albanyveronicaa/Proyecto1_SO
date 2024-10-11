@@ -282,11 +282,11 @@ public class MainUI extends javax.swing.JFrame {
                         planta.getTrabajadores()[i].setTipo("Placa Base");
 
                         if (planta.getNombre().equals("Dell")) {
-                            planta.getTrabajadores()[i].cambiarParametros(0.5f, 10);
+                            planta.getTrabajadores()[i].cambiarParametros(0.25f, 20);
                             break;
 
                         } else {
-                            planta.getTrabajadores()[i].cambiarParametros(0.5f, 10);
+                            planta.getTrabajadores()[i].cambiarParametros(0.33f, 20);
                             break;
                         }
                     }
@@ -302,11 +302,11 @@ public class MainUI extends javax.swing.JFrame {
                         planta.getTrabajadores()[i].setTipo("CPU");
 
                         if (planta.getNombre().equals("Dell")) {
-                            planta.getTrabajadores()[i].cambiarParametros(0.5f, 10);
+                            planta.getTrabajadores()[i].cambiarParametros(0.25f, 26);
                             break;
 
                         } else {
-                            planta.getTrabajadores()[i].cambiarParametros(0.5f, 10);
+                            planta.getTrabajadores()[i].cambiarParametros(0.33f, 26);
                             break;
                         }
                     }
@@ -322,11 +322,11 @@ public class MainUI extends javax.swing.JFrame {
                         planta.getTrabajadores()[i].setTipo("RAM");
 
                         if (planta.getNombre().equals("Dell")) {
-                            planta.getTrabajadores()[i].cambiarParametros(3f, 10);
+                            planta.getTrabajadores()[i].cambiarParametros(1f, 40);
                             break;
 
                         } else {
-                            planta.getTrabajadores()[i].cambiarParametros(3f, 10);
+                            planta.getTrabajadores()[i].cambiarParametros(2f, 40);
                             break;
                         }
                     }
@@ -342,11 +342,11 @@ public class MainUI extends javax.swing.JFrame {
                         planta.getTrabajadores()[i].setTipo("Fuente de Alimentación");
 
                         if (planta.getNombre().equals("Dell")) {
-                            planta.getTrabajadores()[i].cambiarParametros(3f, 10);
+                            planta.getTrabajadores()[i].cambiarParametros(5f, 16);
                             break;
 
                         } else {
-                            planta.getTrabajadores()[i].cambiarParametros(3f, 10);
+                            planta.getTrabajadores()[i].cambiarParametros(5f, 16);
                             break;
                         }
                     }
@@ -362,11 +362,11 @@ public class MainUI extends javax.swing.JFrame {
                         planta.getTrabajadores()[i].setTipo("Tarjeta Gráfica");
 
                         if (planta.getNombre().equals("Dell")) {
-                            planta.getTrabajadores()[i].cambiarParametros(0.34f, 10);
+                            planta.getTrabajadores()[i].cambiarParametros(0.5f, 34);
                             break;
 
                         } else {
-                            planta.getTrabajadores()[i].cambiarParametros(0.34f, 10);
+                            planta.getTrabajadores()[i].cambiarParametros(0.33f, 34);
                             break;
                         }
                     }
@@ -382,11 +382,11 @@ public class MainUI extends javax.swing.JFrame {
                         planta.getTrabajadores()[i].setTipo("Ensamblador");
 
                         if (planta.getNombre().equals("Dell")) {
-                            planta.getTrabajadores()[i].cambiarParametros(0.34f, 10);
+                            planta.getTrabajadores()[i].cambiarParametros(0.5f, 25);
                             break;
 
                         } else {
-                            planta.getTrabajadores()[i].cambiarParametros(0.34f, 10);
+                            planta.getTrabajadores()[i].cambiarParametros(0.5f, 25);
                             break;
                         }
                     }
