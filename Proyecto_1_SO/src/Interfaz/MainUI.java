@@ -1889,7 +1889,7 @@ public class MainUI extends javax.swing.JFrame {
                 Integer ensambDell = (Integer) ensambladorDell.getValue();
                 configString += ensambDell + "\n";
 
-                int sumDell = placaDell + cpusDell + ramsDell + fuenteADell + tarjetaGDell ;
+                int sumDell = placaDell + cpusDell + ramsDell + fuenteADell + tarjetaGDell + ensambDell;
 
                 //HP
                 configString += "\nHP\nplaca\n";
