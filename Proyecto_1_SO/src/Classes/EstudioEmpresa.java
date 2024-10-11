@@ -199,7 +199,7 @@ public class EstudioEmpresa {
                 trabajadores[arrayIndex] = trabajador;
                 arrayIndex++;
             } else {
-                Trabajador trabajador = new Trabajador(0.5f, 50, getDuracionDiaMilisegundos(), "Ensamblador", this);
+                Trabajador trabajador = new Trabajador(0.5f, 25, getDuracionDiaMilisegundos(), "Ensamblador", this);
                 trabajador.start();
                 trabajadores[arrayIndex] = trabajador;
                 arrayIndex++;
