@@ -55,14 +55,6 @@ public class MainUI extends javax.swing.JFrame {
         ensambladorTrabajadoresDell.setText(inicialEnsambladores);
     }
 
-    public void DellGanancias(String totalGanancias) {
-        gananciasDell.setText(totalGanancias);
-    }
-
-    public void DellCostos(String totalCostosDell) {
-        costosDell.setText(totalCostosDell);
-    }
-
     public void DellDiasFaltantes(String text) {
         diasFaltantesDell.setText(text);
     }
@@ -83,8 +75,16 @@ public class MainUI extends javax.swing.JFrame {
         estadoDirectorDell.setText(text);
     }
 
-    public void DellCostosOtro(String Text) {
-        costosDell.setText(Text);
+    public void DellGanancias(String totalGanancias) {
+        gananciasDell.setText(totalGanancias);
+    }
+
+    public void DellCostos(String text) {
+        costosDell.setText(text);
+    }
+
+    public void DellCostosOtro(String totalCostos) {
+        costosDell.setText(totalCostos);
     }
 
     public void DellUtilidad(String Text) {
@@ -130,14 +130,6 @@ public class MainUI extends javax.swing.JFrame {
         ensambladorTrabajadoresHP.setText(inicialEnsambladoresHP);
     }
 
-    public void HPGanancias(String totalGanancias) {
-        gananciasHP.setText(totalGanancias);
-    }
-
-    public void HPCostos(String text) {
-        costosHP.setText(text);
-    }
-
     public void HPDiasFaltantes(String text) {
         diasFaltantesHP.setText(text);
     }
@@ -156,6 +148,14 @@ public class MainUI extends javax.swing.JFrame {
 
     public void HPEstadoDirector(String text) {
         estadoDirectorHP.setText(text);
+    }
+
+    public void HPGanancias(String totalGanancias) {
+        gananciasHP.setText(totalGanancias);
+    }
+
+    public void HPCostos(String text) {
+        costosHP.setText(text);
     }
 
     public void HPCostosOtro(String totalCostos) {
@@ -1870,22 +1870,22 @@ public class MainUI extends javax.swing.JFrame {
             try {
                 //DELL
                 configString += "\nDell\nplaca\n";
-               
+
                 Integer placaDell = (Integer) placaBaseDell.getValue();
                 configString += placaDell.toString() + "\ncpu\n";
-                
+
                 Integer cpusDell = (Integer) cpuDell.getValue();
                 configString += cpusDell + "\nram\n";
-               
+
                 Integer ramsDell = (Integer) ramDell.getValue();
                 configString += ramsDell + "\nfuenteA\n";
-                
+
                 Integer fuenteADell = (Integer) fuenteDell.getValue();
                 configString += fuenteADell + "\ntarjetaG\n";
-                
+
                 Integer tarjetaGDell = (Integer) tarjetaGraficaDell.getValue();
                 configString += tarjetaGDell + "\nensamblador\n";
-                
+
                 Integer ensambDell = (Integer) ensambladorDell.getValue();
                 configString += ensambDell + "\n";
 
@@ -1893,22 +1893,22 @@ public class MainUI extends javax.swing.JFrame {
 
                 //HP
                 configString += "\nHP\nplaca\n";
-                
+
                 Integer placaHP = (Integer) placaBaseHP.getValue();
                 configString += placaHP.toString() + "\ncpu\n";
-                
+
                 Integer cpusHP = (Integer) cpuHP.getValue();
                 configString += cpusHP + "\nram\n";
-               
+
                 Integer ramsHP = (Integer) ramHP.getValue();
                 configString += ramsHP + "\nfuenteA\n";
-                
+
                 Integer fuenteAHP = (Integer) fuenteHP.getValue();
                 configString += fuenteAHP + "\ntarjetaG\n";
-                
+
                 Integer tarjetaGHP = (Integer) tarjetaGraficaHP.getValue();
                 configString += tarjetaGHP + "\nensamblador\n";
-                
+
                 Integer ensambHP = (Integer) ensambladorHP.getValue();
                 configString += ensambHP + "\n";
 

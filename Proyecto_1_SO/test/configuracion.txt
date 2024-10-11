@@ -2,17 +2,17 @@ General
 duracionDias
 3000
 diasEntrega
-3
+30
 
 Dell
 placa
 1
 cpu
-1
+5
 ram
 1
 fuenteA
-1
+4
 tarjetaG
 1
 ensamblador
@@ -20,13 +20,13 @@ ensamblador
 
 HP
 placa
-1
+6
 cpu
 1
 ram
 1
 fuenteA
-1
+6
 tarjetaG
 1
 ensamblador
